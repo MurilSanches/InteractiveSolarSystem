@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sistema Solar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="links/styles.css">
+    <link type="text/javascript" href="links/script.js">
+    <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
+  </head>
+  <body id="SistemaSolar">
+      <div class="Glow" unselectable="on">
+        <div class="Stars" unselectable="on">
+    <center>
+    <h1 unselectable="on">Aprendendo sobre o Sistema Solar</h1>
+  <nav id="menu" unselectable="on">
+  <ul>
+    <li><a href="PaginaSol.html" unselectable="on">Sol</a></li>
+    <li><a href="#" unselectable="on">Mercurio</a></li>
+    <li><a href="#" unselectable="on">Venus</a></li>
+    <li><a href="#" unselectable="on">Terra</a></li>
+    <li><a href="#" unselectable="on">Marte</a></li>
+    <li><a href="#" unselectable="on">Jupiter</a></li>
+    <li><a href="#" unselectable="on">Saturno</a></li>
+    <li><a href="#" unselectable="on">Urano</a></li>
+    <li><a href="#" unselectable="on">Netuno</a></li>
+    <li><a href="#" unselectable="on">Plutão</a></li>
+  </ul>
+</nav>
+</center>
+<div class="dropdown">
+  <span class="sol" unselectable="on" onmouseenter=""></span>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>  
+    <span class="mercurio" unselectable="on" onmouseenter=""></span>
+    <span class="venus" unselectable="on" onmouseenter=""></span>
+    <span class="terra" unselectable="on" onmouseenter=""></span>
+    <span class="marte" unselectable="on" onmouseenter=""></span>
+    <span class="jupiter" unselectable="on" onmouseenter=""></span>
+    <span class="saturno" unselectable="on" onmouseenter=""></span>
+    <span class="urano" unselectable="on" onmouseenter=""></span>
+    <span class="netuno" unselectable="on" onmouseenter=""></span> 
+
+   <canvas id="OrbitaMercurio">
+Your browser does not support the HTML5 canvas tag.</canvas> 
+
+   </div>
+    </div>
+
+
+<script>
+
+var c = document.getElementById("OrbitaMercurio");
+var ctx = c.getContext("2d");
+ctx.strokeStyle = "white";
+ctx.beginPath();
+ctx.arc(100,100,80,10,4*Math.PI);
+ctx.stroke();
+
+function InformacaoSol()
+{
+  document.write();
+}
+      
+
+</script> 
+  </body>  
+</html>

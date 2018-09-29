@@ -1,0 +1,368 @@
+body
+{
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  padding: 0; 
+  margin : 0pt;
+  background-color: #08090A;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1
+{
+  color: white;
+  font-size: 40px;
+}
+
+#menu ul 
+{
+  padding:0px;
+  margin:0px;
+  list-style:none;
+}
+
+#menu ul li 
+{ 
+  display: inline; 
+}
+
+#menu ul li a 
+{
+  padding: 2px 10px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+#menu ul li a:hover
+{
+  background: white;
+  color: black;
+  border-radius: 20px;
+}
+
+#SistemaSolar
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.Stars 
+{
+  width: 100%;
+  height: 100%;
+  background-image: url('img/stars.jpg');
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.65; 
+  margin : collapse;
+  position: absolute;
+} 
+
+.Glow
+{
+  width: 100%;
+  height: 100%;
+  background-image: url('img/glow.jpg');
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;                                                                                                                            
+  margin : collapse;
+  position: absolute;
+}
+
+/*@media screen and(max-width: )
+.sol
+{
+  border: none;
+  background:url('img/sun.png') transparent no-repeat;
+  width: 7.5%;
+  height: 15%;
+  position: absolute;
+  top: 45%;
+  left: 27%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mercurio
+{
+  border: none;
+  background:url('img/p-mercury.png') transparent no-repeat;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top: 53%;
+  left: 38%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.venus
+{
+  border: none;
+  background:url('img/p-venus.png') transparent no-repeat;
+  width: 1.7%;
+  height: 3.5%;
+  position: absolute;
+  top: 52%;
+  left: 41%;
+}
+
+.terra
+{
+  border: none;
+  background:url('img/p-earth.png') transparent no-repeat;
+  width: 2.2%;
+  height: 3.8%;
+  position: absolute;
+  top: 52%;
+  left: 45%;
+}
+
+.marte
+{
+  border: none;
+  background:url('img/p-mars.png') transparent no-repeat;
+  width:2%;
+  height: 3.5%;
+  position: absolute;
+  top: 52.3%;
+  left: 49%;
+}
+
+.jupiter
+{
+  border: none;
+  background:url('img/p-jupiter.png') transparent no-repeat;
+  width: 6.3%;
+  height: 10.8%;
+  position: absolute;
+  top: 48%;
+  left: 54%;
+}
+
+.saturno
+{
+  border: none;
+  background:url('img/p-saturn.png') transparent no-repeat;
+  width: 5.1%;
+  height: 8.8%;
+  position: absolute;
+  top: 49.5%;
+  left: 62%;
+}
+
+.urano
+{
+  border: none;
+  background:url('img/p-uranus.png') transparent no-repeat;
+  width: 4.3%;
+  height: 7%;
+  position: absolute;
+  top: 51%;
+  left: 70%;
+}
+
+.netuno
+{
+  border: none;
+  background:url('img/p-neptune.png') transparent no-repeat;
+  width: 3.5%;
+  height: 6.2%;
+  position: absolute;
+  top: 51.5%;
+  left: 75%;
+}
+*/
+
+/*@media only screen and(max-width: 1800px)
+{*/
+  .sol
+  {
+    border: none;
+    background:url('img/sun.png') transparent no-repeat;
+    width: 10%;
+    height: 15%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .mercurio
+  {
+    border: none;
+    background:url('img/p-mercury.png') transparent no-repeat;
+    width: 1%;
+    height: 2%;
+    position: absolute;
+    top: 53%;
+    left: 41%;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .venus
+  {
+    border: none;
+    background:url('img/p-venus.png') transparent no-repeat;
+    width: 1.7%;
+    height: 3.5%;
+    position: absolute;
+    top: 52%;
+    left: 37%;
+  }
+
+  .terra
+  {
+    border: none;
+    background:url('img/p-earth.png') transparent no-repeat;
+    width: 2.2%;
+    height: 3.8%;
+    position: absolute;
+    top: 52%;
+    left: 45%;
+  }
+
+  .marte
+  {
+    border: none;
+    background:url('img/p-mars.png') transparent no-repeat;
+    width:2%;
+    height: 3.5%;
+    position: absolute;
+    top: 52.3%;
+    left: 49%;
+  }  
+
+  .jupiter
+  {
+    border: none;
+    background:url('img/p-jupiter.png') transparent no-repeat;
+    width: 6.3%;
+    height: 10.8%;
+    position: absolute;
+    top: 48%;
+    left: 54%;
+  }
+
+  .saturno
+  {
+    border: none;
+    background:url('img/p-saturn.png') transparent no-repeat;
+    width: 5.1%;
+    height: 8.8%;
+    position: absolute;
+    top: 49.5%;
+    left: 62%;
+  }
+
+  .urano
+  {
+    border: none;
+    background:url('img/p-uranus.png') transparent no-repeat;
+    width: 4.3%;
+    height: 7%;
+    position: absolute;
+    top: 51%;
+    left: 70%;
+  }
+
+  .netuno
+  {
+    border: none;
+    background:url('img/p-neptune.png') transparent no-repeat;
+    width: 3.5%;
+    height: 6.2%;
+    position: absolute;
+    top: 51.5%;
+    left: 75%;
+  }
+/*}*/
+
+
+.sectionSol
+{
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  background:#888888;
+  border-radius: 30px;
+  opacity: 0.9;
+  box-shadow: 5px 10px black;
+}
+
+.Voltar
+{
+  font-size:15px;
+  border-radius: 200px;
+  padding: 2px 18px;
+  background:white;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  left: 94.6%;
+  top: 1%;
+  opacity: 0.9;
+}
+
+.divImagem
+{
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  background:url("img/stars.png");
+}
+
+.SolReal
+{
+  background:url("img/Sol.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 45%;
+  left: 27%;
+}
+
+#OrbitaMercurio
+{
+  width:200; 
+  height:100;
+  position: absolute;
+  top: 48%;
+  left: 38.5%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
