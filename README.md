@@ -1,1 +1,1 @@
-# ProjetoPratica1
+# Interactive solar system
