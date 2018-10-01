@@ -1,0 +1,31 @@
+.Stars 
+{
+  width: 100%;
+  height: 100%;
+  background-image: url('img/stars.jpg');
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.65; 
+  margin : collapse;
+  position: absolute;
+} 
+
+.Glow
+{
+  width: 100%;
+  height: 100%;
+  background-image: url('img/glow.jpg');
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;                                                                                                                            
+  margin : collapse;
+  position: absolute;
+}
+
+#Terra
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
