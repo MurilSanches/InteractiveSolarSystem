@@ -7,6 +7,7 @@
     <link type="text/javascript" href="links/script.js">
     <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="links/script.js"></script> 
   </head>
   <body id="SistemaSolar" onload="carregar()">
@@ -25,22 +26,29 @@
     <li><a href="#" unselectable="on">Saturno</a></li>
     <li><a href="#" unselectable="on">Urano</a></li>
     <li><a href="#" unselectable="on">Netuno</a></li>
-    <li><a href="#" unselectable="on">Plutão</a></li>
   </ul>
 </nav>
-</center>
+
 </div>  
-    <span class="sol grow" unselectable="on" onmouseenter=""></span>
-    <canvas id="orbita"  height="790" width="1900"></canvas>
-    <span class="mercurio grow" unselectable="on" onmouseenter=""></span>
-    <span class="venus grow" unselectable="on" onmouseenter=""></span>
+    <span id="sol" class="sol grow" unselectable="on" onmouseenter=""></span>
+    <canvas id="orbita" width="1900" height="790"></canvas>
+    <span id="mercurio" class="mercurio grow" unselectable="on" onmouseenter=""></span>
+    <span id="venus" class="venus grow" unselectable="on" onmouseenter=""></span>
     <span id="terra" class="grow"  unselectable="on" onmouseenter=""></span>
-    <span class="marte grow" unselectable="on" onmouseenter=""></span>
-    <span class="jupiter grow" unselectable="on" onmouseenter=""></span>
-    <span class="saturno grow" unselectable="on" onmouseenter=""></span>
-    <span class="urano grow" unselectable="on" onmouseenter=""></span>
-    <span class="netuno grow"></span> 
+    <span id="marte" class="marte grow" unselectable="on" onmouseenter=""></span>
+    <span id="jupiter" class="jupiter grow" unselectable="on" onmouseenter=""></span>
+    <span id="saturno" class="saturno grow" unselectable="on" onmouseenter=""></span>
+    <span id="urano" class="urano grow" unselectable="on" onmouseenter=""></span>
+    <span id="netuno"class="netuno grow"></span> 
    </div>
+    </div>
+  </center>    
+    <div class="aside">
+        <br>
+      <label class="switch">
+        <input id="switch" type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
     </div>
     
   </body>  

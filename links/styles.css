@@ -190,12 +190,23 @@ h1
 
 /*@media only screen and(max-width: 1800px)
 {*/
-  canvas
+  .aside
   {
+    text-align: right;
+    border: 0;
+  }
+
+  .btn
+  {
+    background: white;
+    border: 0;
+  }
+
+  canvas{
+
     position: absolute;
     top: 15%;
   }
-
   .sol
   {
     border: none;
@@ -213,6 +224,14 @@ h1
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+    z-index: 1;
+  }
+
+  .reduzir
+  {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
     z-index: 1;
   }
 
@@ -275,7 +294,7 @@ h1
     height: 10.8%;
     position: absolute;
     top: 53%;
-    left: 25%;
+    left: 23%;
     z-index: 1;
   }
 
@@ -287,7 +306,7 @@ h1
     height: 8.8%;
     position: absolute;
     top: 54.5%;
-    left: 20%;
+    left: 16.5%;
     z-index: 1;
   }
 
@@ -299,7 +318,7 @@ h1
     height: 7%;
     position: absolute;
     top: 56%;
-    left: 70%;
+    left: 10%;
     z-index: 1;
   }
 
@@ -311,7 +330,7 @@ h1
     height: 6.2%;
     position: absolute;
     top: 56.5%;
-    left: 75%;
+    left: 4%;
     z-index: 1;
   }
 /*}*/
@@ -366,11 +385,58 @@ h1
   height: 110%;
 }
 
-#OrbitaMercurio
-{
-  width:200; 
-  height:100;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {display:none;}
+
+.slider {
   position: absolute;
-  top: 48%;
-  left: 38.5%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(2, 6, 8);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(2, 6, 8);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
