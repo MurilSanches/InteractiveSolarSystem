@@ -6,8 +6,10 @@
     <link rel="stylesheet" type="text/css" href="links/styles.css">
     <link type="text/javascript" href="links/script.js">
     <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="links/script.js"></script> 
   </head>
-  <body id="SistemaSolar">
+  <body id="SistemaSolar" onload="carregar()">
       <div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
     <center>
@@ -29,17 +31,17 @@
 </center>
 </div>  
     <span class="sol grow" unselectable="on" onmouseenter=""></span>
-    <canvas id="orbitaMercurio"></canvas>
+    <canvas id="orbita"  height="790" width="1900"></canvas>
     <span class="mercurio grow" unselectable="on" onmouseenter=""></span>
     <span class="venus grow" unselectable="on" onmouseenter=""></span>
-    <span class="terra grow"  unselectable="on" onmouseenter=""></span>
+    <span id="terra" class="grow"  unselectable="on" onmouseenter=""></span>
     <span class="marte grow" unselectable="on" onmouseenter=""></span>
     <span class="jupiter grow" unselectable="on" onmouseenter=""></span>
     <span class="saturno grow" unselectable="on" onmouseenter=""></span>
     <span class="urano grow" unselectable="on" onmouseenter=""></span>
-    <span class="netuno grow" unselectable="on" onmouseenter=""></span> 
+    <span class="netuno grow"></span> 
    </div>
     </div>
-    <script type="text/javascript" href="links/script.js"></script> 
+    
   </body>  
 </html>
