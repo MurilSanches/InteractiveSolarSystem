@@ -48,9 +48,20 @@
 			ctx.closePath();
 	    }
 	};
+
+	// orbitaSaturno = function()
+	// {
+	// 	ctx.beginPath();
+	// 	ctx.fillStyle =  'rgb(88, 35, 12)';
+	// 	ctx.arc(0,403,40,0,2*Math.PI);
+	// 	ctx.fill();
+	// 	ctx.clearRect(0,0);
+	// 	ctx.closePath();
+	// }
 	
 	orbita = function() 
     {  
+		ctx.strokeStyle = 'white';
 		ctx.beginPath();
 		ctx.arc(60,403,180,0,2*Math.PI);
 		ctx.stroke();
@@ -125,6 +136,7 @@
 
 		//myMove();
 		orbitaPadrao();
+		//orbitaSaturno();
 		setInterval(testar, 100);
 	}
 
@@ -132,6 +144,7 @@
 		var chk = document.getElementById("switch");
 		{
 			var planeta = document.getElementById("sol");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -155,6 +168,7 @@
 			}
 
 			planeta = document.getElementById("mercurio");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -167,6 +181,7 @@
 			}
 
 			planeta = document.getElementById("venus");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -179,6 +194,7 @@
 			}
 
 			planeta = document.getElementById("terra");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -191,6 +207,7 @@
 			}
 
 			planeta = document.getElementById("marte");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -203,6 +220,7 @@
 			}
 
 			planeta = document.getElementById("jupiter");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -215,6 +233,7 @@
 			}
 
 			planeta = document.getElementById("saturno");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -227,6 +246,7 @@
 			}
 
 			planeta = document.getElementById("urano");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{
@@ -239,6 +259,7 @@
 			}
 
 			planeta = document.getElementById("netuno");
+			planeta.style.transition = "left 2s";
 
 			if(chk.checked != true)
 			{

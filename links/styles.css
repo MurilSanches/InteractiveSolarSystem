@@ -195,13 +195,6 @@ h1
     text-align: right;
     border: 0;
   }
-
-  .btn
-  {
-    background: white;
-    border: 0;
-  }
-
   canvas{
 
     position: absolute;
@@ -235,7 +228,6 @@ h1
     z-index: 1;
   }
 
-
   .mercurio
   {
     border: none;
@@ -245,8 +237,6 @@ h1
     position: absolute;
     top: 58%;
     left: 42%;
-    pointer-events: none;
-    user-select: none;
     z-index: 1;
   }
 
@@ -333,8 +323,6 @@ h1
     left: 4%;
     z-index: 1;
   }
-/*}*/
-
 
 .sectionPlaneta
 {
@@ -363,17 +351,36 @@ h1
   opacity: 0.9;
 }
 
+#divInformacao 
+{
+  text-align: center
+}
+
+#div-content ul 
+{
+  text-align:inherit;
+  position: relative;
+  padding:0px;
+  margin:0px;
+  list-style:none;
+  z-index: 2;
+}
+
+#div-content ul li 
+{ 
+  position: relative;
+  display: line; 
+
+}
+
 .divImagem
 {
   position: absolute;
   left: 0;
   top: 0;
-  border:2px solid black;
   width: 45%;
   height: 100%;
 }
-
-
 
 .SolReal
 {
@@ -383,6 +390,86 @@ h1
   top: -15%;
   width: 125%;
   height: 110%;
+}
+
+.MercurioReal
+{
+  background:url("img/Mercurio.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
+}
+
+.VenusReal
+{
+  background:url("img/Venus.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
+}
+
+.TerraReal
+{
+  background:url("img/Terra.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
+}
+
+.MarteReal
+{
+  background:url("img/Marte.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
+}
+
+.JupiterReal
+{
+  background:url("img/Jupiter.png");
+  position: absolute;
+  left: -45%;
+  top: -15%;
+  width: 140%;
+  height: 110%;
+}
+
+.SaturnoReal
+{
+  background:url("img/SaturnoInclinado.png");
+  position: absolute;
+  left: -45%;
+  top: -10%;
+  width: 150%;
+  height: 100%;
+}
+
+.UranoReal
+{
+  background:url("img/UranoLado.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
+}
+
+.NetunoReal
+{
+  background:url("img/Netuno.png");
+  position: absolute;
+  left: -45%;
+  top: -25%;
+  width: 140%;
+  height: 130%;
 }
 
 .switch {
@@ -440,3 +527,31 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.dropdown 
+{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content1, .dropdown-content2,.dropdown-content3,.dropdown-content4,.dropdown-content5,.dropdown-content6,.dropdown-content7,.dropdown-content8,.dropdown-content9 {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  min-width: 160px;
+  min-height: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  left: 0;
+  top: 100%;
+}
+
+#sol:hover .dropdown-content1, #mercurio:hover .dropdown-content2, #venus:hover .dropdown-content3, #terra:hover .dropdown-content4, #marte:hover .dropdown-content5,
+#jupiter:hover .dropdown-content6, #saturno:hover .dropdown-content7, #urano:hover .dropdown-content8, #netuno:hover .dropdown-content9
+{
+  display: block;
+}
+
+
