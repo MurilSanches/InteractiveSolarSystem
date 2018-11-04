@@ -192,7 +192,8 @@ h1
 {*/
   .aside
   {
-    text-align: right;
+    position: absolute;
+    left: 94%;
     border: 0;
   }
   canvas{
@@ -550,6 +551,9 @@ min-width: 1088.64px;
   display: inline-block;
   width: 40px;
   height: 20px;
+  left: 30px;
+  border:1px solid #808080;
+  border-radius: 25px;
 }
 
 .switch input {display:none;}
