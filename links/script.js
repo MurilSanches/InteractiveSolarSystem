@@ -140,7 +140,8 @@
 		setInterval(testar, 100);
 	}
 
-	testar = function(){
+	testar = function()
+	{	
 		var chk = document.getElementById("switch");
 		{
 			var planeta = document.getElementById("sol");
@@ -160,7 +161,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 0 +'px';
+				planeta.style.left = 0 +'%';
 			}
 			else
 			{
@@ -173,7 +174,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 230 +'px';
+				planeta.style.left = 12 +'%';
 			}
 			else
 			{
@@ -186,7 +187,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 300 +'px';
+				planeta.style.left = 15.625 +'%';
 			}
 			else
 			{
@@ -199,7 +200,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 400 +'px';
+				planeta.style.left = 20.8 +'%';
 			}
 			else
 			{
@@ -212,7 +213,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 500 +'px';
+				planeta.style.left = 26 +'%';
 			}
 			else
 			{
@@ -225,7 +226,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 650 +'px';
+				planeta.style.left = 33.85 +'%';
 			}
 			else
 			{
@@ -238,7 +239,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 850 +'px';
+				planeta.style.left = 44.27 +'%';
 			}
 			else
 			{
@@ -251,7 +252,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 1050 +'px';
+				planeta.style.left = 54.68 +'%';
 			}
 			else
 			{
@@ -264,12 +265,75 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 1250 +'px';
+				planeta.style.left = 65.1 +'%';
 			}
 			else
 			{
 				planeta.style.left = 4 + '%';
 			}
 		}
+
+		var scre = $("body").width(); 
+	if(scre > 1600)
+	{
+		$("ul.itens").addClass("normal");
+	    $("ul.itens").removeClass("reduzir09");
+	    $("ul.itens").removeClass("reduzir08");
+	    $("ul.itens").removeClass("reduzir07");            
+	    $("h1.titulo").addClass("normal");
+	    $("h1.titulo").removeClass("reduzir09");
+	    $("h1.titulo").removeClass("reduzir08");   
+	    $("h1.titulo").removeClass("reduzir07");      
+	    $("canvas.orbita").addClass("normal");
+	    $("canvas.orbita").removeClass("reduzir09");
+	    $("canvas.orbita").removeClass("reduzir08");
+	    $("canvas.orbita").removeClass("reduzir07");
+	}
+
+    if (scre >= 1200 && scre < 1600)
+    {
+      	$("ul.itens").addClass("reduzir09");
+      	$("ul.itens").removeClass("reduzir08");
+      	$("ul.itens").removeClass("reduzir07"); 
+      	$("ul.itens").removeClass("normal"); 
+      	$("h1.titulo").removeClass("normal");   
+      	$("canvas.orbita").removeClass("normal");            
+      	$("h1.titulo").addClass("reduzir09");
+      	$("h1.titulo").removeClass("reduzir08");
+        $("h1.titulo").removeClass("reduzir07");        
+        $("canvas.orbita").addClass("reduzir09");
+        $("canvas.orbita").removeClass("reduzir08");
+        $("canvas.orbita").removeClass("reduzir07");      
+    } 
+    if ( scre > 660 && scre < 992) 
+    {
+      	$("ul.itens").addClass("reduzir08");
+      	$("ul.itens").removeClass("reduzir09");
+        $("ul.itens").removeClass("reduzir07");             
+      	$("h1.titulo").addClass("reduzir08");
+      	$("h1.titulo").removeClass("reduzir09");
+        $("h1.titulo").removeClass("reduzir07");        
+        $("canvas.orbita").addClass("reduzir08");
+        $("canvas.orbita").removeClass("reduzir09");
+        $("canvas.orbita").removeClass("reduzir07");
+        $("ul.itens").removeClass("normal"); 
+      	$("h1.titulo").removeClass("normal");   
+      	$("canvas.orbita").removeClass("normal"); 
+    } 
+    if (scre <= 660 ) 
+    {
+      	$("ul.itens").addClass("reduzir07");
+      	$("ul.itens").removeClass("reduzir09");
+        $("ul.itens").removeClass("reduzir08");   
+      	$("h1.titulo").addClass("reduzir07");
+      	$("h1.titulo").removeClass("reduzir09");
+        $("h1.titulo").removeClass("reduzir08");           
+        $("canvas.orbita").addClass("reduzir07");
+        $("canvas.orbita").removeClass("reduzir09");
+        $("canvas.orbita").removeClass("reduzir08");
+        $("ul.itens").removeClass("normal"); 
+      	$("h1.titulo").removeClass("normal");   
+      	$("canvas.orbita").removeClass("normal");      
+    }   
 	}
 

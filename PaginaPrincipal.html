@@ -14,10 +14,11 @@
   <body id="SistemaSolar" onload="carregar()">
       <div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
-    <center>
-    <h1 unselectable="on">Aprendendo sobre o Sistema Solar</h1>
+    
+    <center>      
+    <h1 unselectable="on" class="titulo">Aprendendo sobre o Sistema Solar</h1>
   <nav id="menu" unselectable="on">
-  <ul>
+  <ul class="itens">
     <li><a href="PaginaSol.html" unselectable="on">Sol</a></li>
     <li><a href="PaginaMercurio.html" unselectable="on">Mercurio</a></li>
     <li><a href="PaginaVenus.html" unselectable="on">Venus</a></li>
@@ -30,6 +31,7 @@
   </ul>
 </nav>
 
+
 </div class="dropdown">  
     <canvas id="orbita" width="1900" height="790"></canvas>
     <span id="sol" class="sol grow" unselectable="on" onmouseenter="">
@@ -37,45 +39,21 @@
         <div id="menu">
         <p>Sol:</p>
         <ul>
-          <li>  <script>
-                var xmlhttp = new XMLHttpRequest();
-                var url = "http://localhost:3000/estrela";
-                xmlhttp.onreadystatechange=function() {
-                if (this.readyState == 4 && this.status == 200) {
-                //quand o os dados retornarem da requisição serão enviados para a função ExibeDados()
-                ExibeDados(this.responseText);
-                }
-                } 
-                xmlhttp.open("GET", url, true); 
-                xmlhttp.send();
-               
-                function ExibeDados(response) {
-                console.log(response);
-                var arr = JSON.parse(response); //converter JSON em array
-                console.log(arr);
-                var out = "<table>";
-                for(var i = 0; i < arr.length; i++) {
-                out += "<tr><td>" + arr[i].Nome + "</td><td>" + arr[i].Nome + "</td><td>" + arr[i].Volume + "</td><td>" + arr[i].Massa + "</td><td>" +
-                arr[i].Gravidade + "</td><td>" + arr[i].QntsPlanetasOrbitam + "</td></tr>";
-                }
-                out += "</table>";
-                document.getElementById("id01").innerHTML = out;
-                }
-  </script></li>
+          <li><a href="PaginaSol.html">mais informações</a></li>
         </ul>
       </div>
     </div>
     </span> 
     <span id="mercurio" class="mercurio grow" unselectable="on" onmouseenter="">
-        <div class="dropdown-content2">
-            <div id="menu">
-              <p>Mercurio:</p>
-              <ul>
-                  <li><a href="PaginaMercurio.html">mais informações</a></li>
-                </ul>
-            </div>
-          </div>
-    </span>
+     <div class="dropdown-content2">
+        <div id="menu">
+        <p>Mercurio:</p>
+        <ul>
+          <li><a href="PaginaMercurio.html">mais informações</a></li>
+        </ul>
+      </div>
+    </div>
+    </span> 
     <span id="venus" class="venus grow" unselectable="on" onmouseenter="">
         <div class="dropdown-content3">
             <div id="menu">
@@ -148,12 +126,14 @@
    </div>
     </div>
         <div class="aside">
+          <br>
+          <label class="lbSwitch">Vizualização :</label>
         <br>
-      <label class="switch">
+        <label class="switch">
         <input id="switch" type="checkbox" checked>
         <span class="slider round"></span>
       </label>
     </div>
-  </center>    
+  </center> 
   </body>  
 </html>
