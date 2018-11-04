@@ -335,5 +335,10 @@
       	$("h1.titulo").removeClass("normal");   
       	$("canvas.orbita").removeClass("normal");      
     }   
-	}
 
+    var screY = $("body").height() - 290;
+    var screX = $("body").width();
+    //alert("X: "+screX+"\nY: "+screY);
+    $("canvas.orbita").css("width", screX);
+    $("canvas.orbita").css("height", screY);
+}
