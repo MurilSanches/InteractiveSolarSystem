@@ -50,6 +50,7 @@
   xmlhttp.onreadystatechange=function() {
   if (this.readyState == 4 && this.status == 200) {
   ExibeDadosSol(this.responseText);
+  ExibeDadosSol2(this.responseText);
   }
   } 
   xmlhttp.open("GET", url, true); 
@@ -57,6 +58,18 @@
 
 
   function ExibeDadosSol(response) {
+  console.log(response);
+  var arr = JSON.parse(response); //converter JSON em array
+  console.log(arr);
+  var out = "<table>";
+  for(var i = 0; i < arr.length; i++) {
+  out += "<ul class=\"informacaoSol\"><li>" + "Nome: " + arr[i].Nome + "</li><br><li>" + "Volume: " + arr[i].Volume + "</li><li>"  + "Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>"  + "Massa: " + arr[i].Massa + "</li><li>" + "Densidade: " + arr[i].Densidade + "</li><li>" + "Gravidade: " + arr[i].Gravidade + "</li><li>" + "Período Orbital Galáctico: " + arr[i].PeriodoOrbitalGalactico + "</li><li>" + "Planetas Orbitantes: " + arr[i].QntsPlanetasOrbitam + "</li><li>" + "Temperatura da Superficie: " + arr[i].TemperaturaSuperficie + "</li><li>" + "Temperatura do Núcleo: " + arr[i].TemperaturaNucleo + "</li><li>" + "Velocidade De Rotação: " + arr[i].VelocidadeDeRotacao + "</li><li>" + "Descrição: "  + arr[i].Descricao + "</li><li>" + "Nome do Sistema Solar: " + arr[i].NomeSistema + "</li></ul>"
+    }
+  out += "</table>";
+  document.getElementById("div-content").innerHTML = out;
+  } 
+
+  function ExibeDadosSol2(response) {
   console.log(response);
   var arr = JSON.parse(response); //converter JSON em array
   console.log(arr);
