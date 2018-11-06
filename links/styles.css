@@ -424,8 +424,7 @@ h1
 #div-content ul li 
 { 
   position: relative;
-  display: line; 
-
+  display: line;
 }
 
 .divImagem
@@ -435,6 +434,17 @@ h1
   top: 0;
   width: 45%;
   height: 100%;
+}
+
+.informacaoSol
+{
+  position: absolute;
+  left: 350px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 30px;
 }
 
 .SolReal
