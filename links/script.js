@@ -132,20 +132,19 @@
 		ctx.clearRect(0, 0, $("#orbita").width(), $("#orbita").height());
 	}
 
-	carregar = function(){
-
+	carregar = function(){	    
 		//myMove();
 		orbitaPadrao();
 		//orbitaSaturno();
-		setInterval(testar, 100);
+		setInterval(testar, 10);
 	}
 
-	testar = function()
-	{	
+	mudarOrbita = function()
+	{
 		var chk = document.getElementById("switch");
 		{
 			var planeta = document.getElementById("sol");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -169,7 +168,7 @@
 			}
 
 			planeta = document.getElementById("mercurio");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -182,7 +181,7 @@
 			}
 
 			planeta = document.getElementById("venus");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -208,7 +207,7 @@
 			}
 
 			planeta = document.getElementById("marte");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -221,7 +220,7 @@
 			}
 
 			planeta = document.getElementById("jupiter");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -234,7 +233,7 @@
 			}
 
 			planeta = document.getElementById("saturno");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -247,7 +246,7 @@
 			}
 
 			planeta = document.getElementById("urano");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -260,7 +259,7 @@
 			}
 
 			planeta = document.getElementById("netuno");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -272,73 +271,60 @@
 				planeta.style.left = 4 + '%';
 			}
 		}
-
-		var scre = $("body").width(); 
-	if(scre > 1600)
-	{
-		$("ul.itens").addClass("normal");
-	    $("ul.itens").removeClass("reduzir09");
-	    $("ul.itens").removeClass("reduzir08");
-	    $("ul.itens").removeClass("reduzir07");            
-	    $("h1.titulo").addClass("normal");
-	    $("h1.titulo").removeClass("reduzir09");
-	    $("h1.titulo").removeClass("reduzir08");   
-	    $("h1.titulo").removeClass("reduzir07");      
-	    $("canvas.orbita").addClass("normal");
-	    $("canvas.orbita").removeClass("reduzir09");
-	    $("canvas.orbita").removeClass("reduzir08");
-	    $("canvas.orbita").removeClass("reduzir07");
 	}
 
-    if (scre >= 1200 && scre < 1600)
-    {
-      	$("ul.itens").addClass("reduzir09");
-      	$("ul.itens").removeClass("reduzir08");
-      	$("ul.itens").removeClass("reduzir07"); 
-      	$("ul.itens").removeClass("normal"); 
-      	$("h1.titulo").removeClass("normal");   
-      	$("canvas.orbita").removeClass("normal");            
-      	$("h1.titulo").addClass("reduzir09");
-      	$("h1.titulo").removeClass("reduzir08");
-        $("h1.titulo").removeClass("reduzir07");        
-        $("canvas.orbita").addClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir08");
-        $("canvas.orbita").removeClass("reduzir07");      
-    } 
-    if ( scre > 660 && scre < 992) 
-    {
-      	$("ul.itens").addClass("reduzir08");
-      	$("ul.itens").removeClass("reduzir09");
-        $("ul.itens").removeClass("reduzir07");             
-      	$("h1.titulo").addClass("reduzir08");
-      	$("h1.titulo").removeClass("reduzir09");
-        $("h1.titulo").removeClass("reduzir07");        
-        $("canvas.orbita").addClass("reduzir08");
-        $("canvas.orbita").removeClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir07");
-        $("ul.itens").removeClass("normal"); 
-      	$("h1.titulo").removeClass("normal");   
-      	$("canvas.orbita").removeClass("normal"); 
-    } 
-    if (scre <= 660 ) 
-    {
-      	$("ul.itens").addClass("reduzir07");
-      	$("ul.itens").removeClass("reduzir09");
-        $("ul.itens").removeClass("reduzir08");   
-      	$("h1.titulo").addClass("reduzir07");
-      	$("h1.titulo").removeClass("reduzir09");
-        $("h1.titulo").removeClass("reduzir08");           
-        $("canvas.orbita").addClass("reduzir07");
-        $("canvas.orbita").removeClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir08");
-        $("ul.itens").removeClass("normal"); 
-      	$("h1.titulo").removeClass("normal");   
-      	$("canvas.orbita").removeClass("normal");      
-    }   
+	testar = function()
+	{	
+		mudarOrbita();
 
-    var screY = $("body").height() - 290;
-    var screX = $("body").width();
-    //alert("X: "+screX+"\nY: "+screY);
-    $("canvas.orbita").css("width", screX);
-    $("canvas.orbita").css("height", screY);
-}
+		var screx = $("body").width(); 
+		if(screx >= 1200)
+		{
+			$("ul.itens").css("font-size" , "16px");
+			$("h1.titulo").css("font-size", "40px");
+			$("button.css3button").css("font-size","14px");
+			$("button.css3button").css("padding","9px 23px");
+			$("button.css3button").css("border-radius","27px");
+			$("button.css3button").css("left","91%");
+		}
+		if (screx > 660 && screx < 1200) 
+		{
+			$("ul.itens").css("font-size" , "14px");
+		  	$("h1.titulo").css("font-size", "36px"); 
+		  	$("button.css3button").css("font-size","12px");
+			$("button.css3button").css("padding","7px 20px");
+			$("button.css3button").css("border-radius","20px");
+			$("button.css3button").css("left","89%");
+		} 
+		if (screx <= 660) 
+		{	 
+			$("ul.itens").css("font-size" , "12px");
+		  	$("h1.titulo").css("font-size", "33px");
+		  	$("button.css3button").css("font-size","14px");
+			$("button.css3button").css("padding","9px 23px");
+			$("button.css3button").css("border-radius","27px");
+			$("button.css3button").css("left","85%");
+		}        
+
+		var body = document.getElementsByTagName('body')[0],
+	    screX = body.clientWidth,
+	    screY = body.clientHeight;
+
+		var c=document.getElementById("orbita");
+
+		c.width = screX;
+		c.height = screY - (screY * 16 * 0.01); 
+
+		var chk = document.getElementById("switch");
+	
+		if(chk.checked != true)
+		{
+			limparTela();
+			orbita();
+		}
+		else
+		{
+			limparTela();
+			orbitaPadrao();
+		}
+	}
