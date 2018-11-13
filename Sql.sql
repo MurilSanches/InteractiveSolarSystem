@@ -3,7 +3,7 @@ Nome varchar(30) primary key,
 QntEstrelas int not null)
 
 create table Sistema(
-Nome varchar(30) primary key,
+Nome varchar(30) not null,
 QntsPlanetas int not null,
 VelocidadeDeRotacao int not null,
 NomeGalaxia varchar(30) not null,

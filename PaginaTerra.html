@@ -61,15 +61,16 @@
 
   function ExibeDadosTerra(response) {
   console.log(response);
-  var arr = JSON.parse(response);
+  var arr = JSON.parse(response); //converter JSON em array
   console.log(arr);
   var out = "<table>";
   for(var i = 0; i < arr.length; i++) {
-  out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período De Rotação: " + arr[i].PeriodoDeRotacao + "</li><li>Periodo Orbital: " + arr[i].PeriodoOrbital + "</li><li>Temperatura: " + arr[i].Temperatura + "</li><li>Velocidade Orbital: " + arr[i].VelocidadeOrbital + "</li><li>Satélites Naturais: " + arr[i].QntsSatelitesNaturais + "</li><li>Nome do Sistema: " + arr[i].NomeSistema + "</li></ul>"}
+  out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período De Rotação: " + arr[i].PeriodoDeRotacao + "</li><li>Periodo Orbital: " + arr[i].PeriodoOrbital + "</li><li>Temperatura: " + arr[i].Temperatura + "</li><li>Velocidade Orbital: " + arr[i].VelocidadeOrbital + "</li><li>Satélites Naturais: " + arr[i].QntsSatelitesNaturais + "</li><li>Nome do Sistema: " + arr[i].NomeSistema + "</li></ul>"
+   }
   out += "</table>";
   document.getElementById("div-content").innerHTML = out;
-  }
-    </script>
+  } 
+  </script>
 
 </body>
 </html>

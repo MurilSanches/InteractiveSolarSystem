@@ -164,7 +164,8 @@
 			}
 			else
 			{
-				planeta.style.left = 45.125 + '%';
+				planeta.style.left = 870 + 'px';
+				//planeta.style.left = 45.125 + '%';
 			}
 
 			planeta = document.getElementById("mercurio");
@@ -177,7 +178,8 @@
 			}
 			else
 			{
-				planeta.style.left = 42 + '%';
+				// planeta.style.left = 42 + '%';
+				planeta.style.left = 838 + 'px';
 			}
 
 			planeta = document.getElementById("venus");
@@ -194,7 +196,7 @@
 			}
 
 			planeta = document.getElementById("terra");
-			planeta.style.transition = "left 2s";
+			planeta.style.transition = "all 2s";
 
 			if(chk.checked != true)
 			{
@@ -308,7 +310,8 @@
 
 
 		var screy = $("body").height();
-		//alert(screy);       
+
+
 
 		var body = document.getElementsByTagName('body')[0],
 	    screX = body.clientWidth,

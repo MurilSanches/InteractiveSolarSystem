@@ -95,8 +95,10 @@ body
     width: 10%;
     height: 17%;
     position: absolute;
-    top: 50%;
-    left: 45.125%;
+    /*top: 50%;
+    left: 45.125%;*/
+    top: 55%;
+    left: 870px;
     min-width: 192px;
     min-height: 183.6px;
     z-index: 1;
@@ -174,8 +176,10 @@ button.css3button {
     width: 1%;
     height: 2%;
     position: absolute;
-    top: 58%;
-    left: 42%;
+    /*top: 58%;
+    left: 42%;*/
+    top: 60%;
+    left:815px;
     min-width: 19.2px;
     min-height: 21.6px;
     z-index: 1;
