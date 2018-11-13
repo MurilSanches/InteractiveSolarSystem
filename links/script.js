@@ -304,7 +304,11 @@
 			$("button.css3button").css("padding","9px 23px");
 			$("button.css3button").css("border-radius","27px");
 			$("button.css3button").css("left","85%");
-		}        
+		} 
+
+
+		var screy = $("body").height();
+		alert(screy);       
 
 		var body = document.getElementsByTagName('body')[0],
 	    screX = body.clientWidth,
@@ -327,4 +331,6 @@
 			limparTela();
 			orbitaPadrao();
 		}
+
+
 	}
