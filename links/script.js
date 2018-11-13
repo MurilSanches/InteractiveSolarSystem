@@ -308,7 +308,7 @@
 
 
 		var screy = $("body").height();
-		alert(screy);       
+		//alert(screy);       
 
 		var body = document.getElementsByTagName('body')[0],
 	    screX = body.clientWidth,
