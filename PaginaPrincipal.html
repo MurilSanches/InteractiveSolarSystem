@@ -36,10 +36,10 @@
     <canvas id="orbita" width="1920" height="790"></canvas>
     <span id="sol" class="sol grow" unselectable="on" onmouseenter="">
     <div class="dropdown-content1">
-        <div id="menu" class="sol123">
+        <div id="menu sol123" class="sol123">
         <p>Sol:</p>
         <ul>
-          <li><a href="PaginaSol.html">mais informações</a></li>
+          <li><a href="PaginaSol.html"></a></li>
         </ul>
       </div>
     </div>
@@ -161,7 +161,7 @@
   out += "<ul class=\"informacaoSol\"><li>" + "Nome: " + arr[i].Nome + "</li><br><li>" + "Volume: " + arr[i].Volume + "</li><li>"  + "Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>"  + "Massa: " + arr[i].Massa + "</li><li>" + "Densidade: " + arr[i].Densidade + "</li><li>" + "Gravidade: " + arr[i].Gravidade + "</li><li>" + "Período Orbital Galáctico: " + arr[i].PeriodoOrbitalGalactico + "</li><li>" + "Planetas Orbitantes: " + arr[i].QntsPlanetasOrbitam + "</li><li>" + "Temperatura da Superficie: " + arr[i].TemperaturaSuperficie + "</li><li>" + "Temperatura do Núcleo: " + arr[i].TemperaturaNucleo + "</li><li>" + "Velocidade De Rotação: " + arr[i].VelocidadeDeRotacao + "</li><li>" + "Descrição: "  + arr[i].Descricao + "</li><li>" + "Nome do Sistema Solar: " + arr[i].NomeSistema + "</li></ul>"
     }
   out += "</table>";
-  document.getElementsByClassName("sol123").innerHTML = out;
+  document.getElementById("sol123").innerHTML = out;
   } 
 
 
