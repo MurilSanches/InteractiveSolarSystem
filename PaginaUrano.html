@@ -34,7 +34,7 @@
       <span class="UranoReal"></span>
     </div>
       <div id="divInformacao">
-          <h1>Informações sobre o Urano:</h1>
+          <h1 class="tituloH1">Informações sobre o Urano:</h1>
           <div id="div-content">
             <ul>
               <li><strong>Massa:</strong></li>
@@ -65,7 +65,7 @@
   console.log(arr);
   var out = "<table>";
   for(var i = 0; i < arr.length; i++) {
-  out += "<ul class=\"informacaoSol\"><li>" + "Nome: " + arr[i].Nome + "</li><br><li>" + "Volume: " + arr[i].Volume + "</li><li>"  + "Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>"  + "Massa: " + arr[i].Massa + "</li><li>" + "Densidade: " + arr[i].Densidade + "</li><li>" + "Gravidade: " + arr[i].Gravidade + "</li><li>" + "Período De Rotação: " + arr[i].PeriodoDeRotacao + "</li><li>" + "Periodo Orbital: " + arr[i].PeriodoOrbital + "</li><li>" + "Temperatura: " + arr[i].Temperatura + "</li><li>" + "Velocidade Orbital: " + arr[i].VelocidadeOrbital + "</li><li>" + "Satélites Naturais: " + arr[i].QntsSatelitesNaturais + "</li><li>" + "Descrição: "  + arr[i].Descricao + "</li><li>" + "Nome do Sistema Solar: " + arr[i].NomeSistema + "</li></ul>"
+  out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período De Rotação: " + arr[i].PeriodoDeRotacao + "</li><li>Periodo Orbital: " + arr[i].PeriodoOrbital + "</li><li>Temperatura: " + arr[i].Temperatura + "</li><li>Velocidade Orbital: " + arr[i].VelocidadeOrbital + "</li><li>Satélites Naturais: " + arr[i].QntsSatelitesNaturais + "</li><li>Nome do Sistema: " + arr[i].NomeSistema + "</li></ul>"
     }
   out += "</table>";
   document.getElementById("div-content").innerHTML = out;

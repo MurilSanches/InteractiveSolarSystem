@@ -11,12 +11,6 @@ body
   z-index: 0;
 }
 
-h1
-{
-  color: white;
-  font-size: 40px;
-}
-
 #menu ul 
 {
   position: relative;
@@ -243,6 +237,12 @@ button.css3button {
     z-index: 1;
   }
 
+  	h1.titulo
+  	{
+  		color:white;
+  		font-size: 40px;
+  	}
+
   .saturno
   {
     border: none;
@@ -288,7 +288,7 @@ button.css3button {
 .sectionPlaneta
 {
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 5%;
   width: 90%;
   height: 80%;
@@ -331,6 +331,12 @@ button.css3button {
 { 
   position: relative;
   display: line;
+}
+
+.tituloH1
+{
+	font-size: 30px;
+	color: white;
 }
 
 .divImagem
@@ -407,7 +413,7 @@ button.css3button {
   background:url("img/Marte.png");
   position: absolute;
   left: -45%;
-  top: -20%;
+  top: 30%;
   width: 140%;
   height: 130%;
    min-width: 1088.64px;
