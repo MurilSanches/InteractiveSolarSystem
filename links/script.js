@@ -164,8 +164,8 @@
 			}
 			else
 			{
-				planeta.style.left = 870 + 'px';
-				//planeta.style.left = 45.125 + '%';
+				//planeta.style.left = 870 + 'px';
+				planeta.style.left = 45.125 + '%';
 			}
 
 			planeta = document.getElementById("mercurio");
@@ -178,8 +178,8 @@
 			}
 			else
 			{
-				// planeta.style.left = 42 + '%';
-				planeta.style.left = 838 + 'px';
+				planeta.style.left = 42 + '%';
+				//planeta.style.left = 838 + 'px';
 			}
 
 			planeta = document.getElementById("venus");
