@@ -1,4 +1,6 @@
-	var ctx;
+﻿	var ctx;
+	var nomeUsuario;
+	var logou;
 	
 	orbitaPadrao = function() 
     {  
@@ -48,16 +50,6 @@
 			ctx.closePath();
 	    }
 	};
-
-	// orbitaSaturno = function()
-	// {
-	// 	ctx.beginPath();
-	// 	ctx.fillStyle =  'rgb(88, 35, 12)';
-	// 	ctx.arc(0,403,40,0,2*Math.PI);
-	// 	ctx.fill();
-	// 	ctx.clearRect(0,0);
-	// 	ctx.closePath();
-	// }
 	
 	orbita = function() 
     {  
@@ -104,49 +96,208 @@
 	    
     };
 
-   	// myMove = function() 
-	// {
-	//  	var elem = document.getElementById("terra");   
-	// 	var coordenadas = elem.getBoundingClientRect();
-	// 	var xInicial = coordenadas.left;
-	// 	var x = coordenadas.left;
-	// 	var xInicial = coordenadas.left;
-	// 	var xFinal = 1160;
-	// 	var vx = 1;
-	// 	var y = coordenadas.top;
-	//   	var id = setInterval(frame, 10);
-	//   	function frame() 
-	//   	{  
-	//     	if (x == xFinal) 
-	//       		vx = -1;
-	// 		if(x == xInicial) 	
-	// 			vx = 1;
-
-	// 		x+=vx; 
-	// 		elem.style.left = x + 'px'; 
-  	// 	}		
-	// }
-
 	limparTela = function()
 	{
 		ctx.clearRect(0, 0, $("#orbita").width(), $("#orbita").height());
 	}
 
-	carregar = function(){
+	carregar = function(){	    
+		orbitaPadrao();		
+		setInterval(testar, 10);
+	}
 
-		//myMove();
-		orbitaPadrao();
-		//orbitaSaturno();
-		setInterval(testar, 100);
+	carregar2 = function()
+	{
+		setInterval(testar, 10);
+	}
+
+	mudarOrbita = function()
+	{
+		if (document.getElementById('switch'))
+		{
+			var chk = document.getElementById("switch");
+			{
+				var planeta = document.getElementById("sol");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					limparTela();
+					orbita();
+				}
+				else
+				{
+					limparTela();
+					orbitaPadrao();
+				}
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 0 +'%';
+				}
+				else
+				{
+					//planeta.style.left = 870 + 'px';
+					planeta.style.left = 46.5 + '%';
+				}
+
+				planeta = document.getElementById("mercurio");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 12.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 43.2 + '%';
+					//planeta.style.left = 838 + 'px';
+				}
+
+				planeta = document.getElementById("venus");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 16.3 +'%';
+				}
+				else
+				{
+					planeta.style.left = 39.7 + '%';
+				}
+
+				planeta = document.getElementById("terra");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 21.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 36.3 + '%';
+				}
+
+				planeta = document.getElementById("marte");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 27 +'%';
+				}
+				else
+				{
+					planeta.style.left = 32.5 + '%';
+				}
+
+				planeta = document.getElementById("jupiter");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 34.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 23 + '%';
+				}
+
+				planeta = document.getElementById("saturno");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 46 +'%';
+				}
+				else
+				{
+					planeta.style.left = 16.5 + '%';
+				}
+
+				planeta = document.getElementById("urano");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 56 +'%';
+				}
+				else
+				{
+					planeta.style.left = 10 + '%';
+				}
+
+				planeta = document.getElementById("netuno");
+				planeta.style.transition = "all 2s";
+
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 67 +'%';
+				}
+				else
+				{
+					planeta.style.left = 4 + '%';
+				}
+			}
+		}
 	}
 
 	testar = function()
 	{	
-		var chk = document.getElementById("switch");
-		{
-			var planeta = document.getElementById("sol");
-			planeta.style.transition = "left 2s";
+		mudarOrbita();
 
+		var screx = $("body").width(); 
+		if(screx >= 1200)
+		{
+			$("ul.itens").css("font-size" , "16px");
+			$("h1.titulo").css("font-size", "40px");
+			$("button.css3button").css("font-size","14px");
+			$("button.css3button").css("padding","9px 23px");
+			$("button.css3button").css("border-radius","27px");
+			$("button.css3button").css("left","91%");
+		}
+		if (screx > 660 && screx < 1200) 
+		{
+			$("ul.itens").css("font-size" , "14px");
+		  	$("h1.titulo").css("font-size", "36px"); 
+		  	$("button.css3button").css("font-size","12px");
+			$("button.css3button").css("padding","7px 20px");
+			$("button.css3button").css("border-radius","20px");
+			$("button.css3button").css("left","89%");
+		} 
+		if (screx <= 660) 
+		{	 
+			$("ul.itens").css("font-size" , "12px");
+		  	$("h1.titulo").css("font-size", "33px");
+		  	$("button.css3button").css("font-size","14px");
+			$("button.css3button").css("padding","9px 23px");
+			$("button.css3button").css("border-radius","27px");
+			$("button.css3button").css("left","85%");
+		} 
+
+		if(document.getElementById("orbita") && document.getElementById("switch"))
+		{
+			var screy = $("body").height();
+
+			var body = document.getElementsByTagName('body')[0],
+			screX = body.clientWidth,
+			screY = body.clientHeight;
+
+			var c=document.getElementById("orbita");
+
+			c.width = screX;
+			c.height = screY - (screY * 16 * 0.01); 
+
+			var chk = document.getElementById("switch");
+		
 			if(chk.checked != true)
 			{
 				limparTela();
@@ -157,157 +308,26 @@
 				limparTela();
 				orbitaPadrao();
 			}
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 0 +'px';
-			}
-			else
-			{
-				planeta.style.left = 45.125 + '%';
-			}
-
-			planeta = document.getElementById("mercurio");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 230 +'px';
-			}
-			else
-			{
-				planeta.style.left = 42 + '%';
-			}
-
-			planeta = document.getElementById("venus");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 300 +'px';
-			}
-			else
-			{
-				planeta.style.left = 38.5 + '%';
-			}
-
-			planeta = document.getElementById("terra");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 400 +'px';
-			}
-			else
-			{
-				planeta.style.left = 35 + '%';
-			}
-
-			planeta = document.getElementById("marte");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 500 +'px';
-			}
-			else
-			{
-				planeta.style.left = 31.5 + '%';
-			}
-
-			planeta = document.getElementById("jupiter");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 650 +'px';
-			}
-			else
-			{
-				planeta.style.left = 23 + '%';
-			}
-
-			planeta = document.getElementById("saturno");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 850 +'px';
-			}
-			else
-			{
-				planeta.style.left = 16.5 + '%';
-			}
-
-			planeta = document.getElementById("urano");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 1050 +'px';
-			}
-			else
-			{
-				planeta.style.left = 10 + '%';
-			}
-
-			planeta = document.getElementById("netuno");
-			planeta.style.transition = "left 2s";
-
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 1250 +'px';
-			}
-			else
-			{
-				planeta.style.left = 4 + '%';
-			}
 		}
-		var scre = $("body").width();   
-    if (scre >= 1200 && scre < 1600)
-    {
-      $("ul.itens").addClass("reduzir09");
-      $("ul.itens").removeClass("reduzir08");
-        $("ul.itens").removeClass("reduzir07");           
-      $("h1.titulo").addClass("reduzir09");
-      $("h1.titulo").removeClass("reduzir08");
-        $("h1.titulo").removeClass("reduzir07");        
-        $("canvas.orbita").addClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir08");
-        $("canvas.orbita").removeClass("reduzir07");      
-    } 
-    if ( scre > 660 && scre < 992) 
-    {
-      $("ul.itens").addClass("reduzir08");
-      $("ul.itens").removeClass("reduzir09");
-        $("ul.itens").removeClass("reduzir07");             
-      $("h1.titulo").addClass("reduzir08");
-      $("h1.titulo").removeClass("reduzir09");
-        $("h1.titulo").removeClass("reduzir07");        
-        $("canvas.orbita").addClass("reduzir08");
-        $("canvas.orbita").removeClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir07");
-    } 
-    if (scre <= 660 ) 
-    {
-      $("ul.itens").addClass("reduzir07");
-      $("ul.itens").removeClass("reduzir09");
-        $("ul.itens").removeClass("reduzir08");   
-      $("h1.titulo").addClass("reduzir07");
-      $("h1.titulo").removeClass("reduzir09");
-        $("h1.titulo").removeClass("reduzir08");           
-        $("canvas.orbita").addClass("reduzir07");
-        $("canvas.orbita").removeClass("reduzir09");
-        $("canvas.orbita").removeClass("reduzir08");     
-    }   
+		var nome = sessionStorage.getItem("Nome");	
+		if(nome != null)
+		{			
+			document.getElementById('liLogin').innerHTML = 'Olá, '+ nome;
+			document.getElementById('liCadastro').innerHTML = 'Sair';
+			document.getElementById("liCadastro").addEventListener("click", sair);	
+			document.getElementById("liCadastro").removeAttribute('href');
+			document.getElementById('liLogin').removeAttribute('href');	
+		}
 	}
 
+	
+	sair = function()
+	{
+		sessionStorage.setItem("Nome", null);
+		document.getElementById('liLogin').innerHTML = 'Fazer login ou';
+		document.getElementById('liCadastro').innerHTML = 'Cadastrar';	
+		document.getElementById('liCadastro').removeEventListener("click", sair);
+		document.getElementById("liCadastro").setAttribute('href',"PaginaCadastro.html");
+		document.getElementById('liLogin').setAttribute('href',"PaginaLogin.html");	
+		alert('Deslogado!');
+	}

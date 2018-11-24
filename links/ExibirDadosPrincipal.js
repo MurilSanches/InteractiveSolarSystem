@@ -1,4 +1,4 @@
-
+﻿
 
   var xmlhttp = new XMLHttpRequest();
   var url = "http://localhost:3000/estrela";
@@ -19,7 +19,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].TemperaturaSuperficie + 
-    "</li><br><br><li><a href=\"PaginaSol.html\">mais informações</a></li></ul>";     
+    "</li><br><br><li><a href=\"Paginas/PaginaSol.html\">mais informações</a></li></ul>";     
     document.getElementsByClassName("informacaoBasico")[0].innerHTML = out;
   } 
 
@@ -40,7 +40,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaJupiter.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaJupiter.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[5].innerHTML = out;
   }
 
@@ -61,7 +61,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaMarte.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaMarte.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[4].innerHTML = out;
   }
 
@@ -82,7 +82,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaMercurio.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaMercurio.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[1].innerHTML = out;
   }
 
@@ -103,7 +103,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaNetuno.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaNetuno.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[8].innerHTML = out;
   }
 
@@ -125,7 +125,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaSaturno.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaSaturno.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[6].innerHTML = out;
   }
 
@@ -146,7 +146,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaTerra.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaTerra.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[3].innerHTML = out;
   }
 
@@ -167,7 +167,7 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaUrano.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaUrano.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[7].innerHTML = out;
   }
 
@@ -188,6 +188,6 @@
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 
     "</li><br><li>Temperatura: " + arr[0].Temperatura + 
-    "</li><br><br><li><a href=\"PaginaVenus.html\">mais informações</a></li></ul>";         
+    "</li><br><br><li><a href=\"Paginas/PaginaVenus.html\">mais informações</a></li></ul>";         
     document.getElementsByClassName("informacaoBasico")[2].innerHTML = out;
   }
