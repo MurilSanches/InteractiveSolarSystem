@@ -1,4 +1,4 @@
-	var ctx;
+﻿	var ctx;
 	var nomeUsuario;
 	var logou;
 	
@@ -310,7 +310,7 @@
 			}
 		}
 		var nome = sessionStorage.getItem("Nome");	
-		if(nome != null)
+		if(nome != null && nome != "null")
 		{			
 			document.getElementById('liLogin').innerHTML = 'Olá, '+ nome;
 			document.getElementById('liCadastro').innerHTML = 'Sair';
