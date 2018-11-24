@@ -51,32 +51,11 @@ filtro = ' where PeriodoOrbital=' + parseInt(requisicao.params.id);
 execSQL('SELECT * from Planeta' + filtro, resposta);
 })
 
-// //o simbolo ? indica que id na rota abaixo é opcional
-// rota.get('/clientes/:id?', (requisicao, resposta) => {
-// 	let filtro = '';
-// 	if (requisicao.params.id) 
-// 		filtro = ' WHERE ID=' + parseInt(requisicao.params.id);
-// 	execSQL('SELECT * from Clientes' + filtro, resposta);
-// })
-
-// // testar no POSTMAN
-// rota.delete('/clientes/:id', (requisicao, resposta) =>{
-// 	execSQL('DELETE Clientes WHERE ID=' + parseInt(requisicao.params.id), resposta);
-//   resposta.end(resposta.json({ mensagem: 'Deletado!'}));
-// })
-
-// rota.post('/clientes', (requisicao, resposta) =>{
-//     const id = parseInt(requisicao.body.id);
-//     const nome = requisicao.body.nome.substring(0,150);
-//     const cpf = requisicao.body.cpf.substring(0,11);
-//     execSQL(`INSERT INTO Clientes(ID, Nome, CPF) VALUES(${id},'${nome}','${cpf}')`, resposta);
-//     resposta.end(resposta.json({ mensagem: 'Incluído!'}));    
-// })
-
-// rota.patch('/clientes/:id', (requisicao, resposta) =>{
-//     const id = parseInt(requisicao.params.id);
-//     const nome = requisicao.body.nome.substring(0,150);
-//     const cpf = requisicao.body.cpf.substring(0,11);
-//     execSQL(`UPDATE Clientes SET Nome='${nome}', CPF='${cpf}' WHERE ID=${id}`, resposta);
-//     resposta.end(resposta.json({ mensagem: 'Alterado!'}));  
-// })
+rota.post('/Usuario', (requisicao, resposta) =>{
+  //const cod = ultimoResp++;
+  const nome = (requisicao.body.Nome.substring(0,15));
+  const sobrenome = (requisicao.body.Sobrenome).substring(0,50);
+  const email = requisicao.body.Email.substring(0,60);
+  const senha = requisicao.body.Senha;  
+  execSQL(`INSERT INTO Responsavel(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
+  resposta.end(resposta.json({ mensagem: 'Incluído!'}))});
