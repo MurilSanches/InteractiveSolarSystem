@@ -8,21 +8,21 @@
 		var senha2 = document.getElementById('Confirmasenha').value;
 
 		if(nome == null || nome == "")
-            document.getElementById('erroNome').value = "Campo obrigatorio";            
+            document.getElementById('erroNome').innerHTML = "Campo obrigatorio";            
 		if(sobrenome == null || nome == "")
-			document.getElementById('erroSobrenome').value = "Campo obrigatorio";
+			document.getElementById('erroSobrenome').innerHTML = "Campo obrigatorio";
 		if(email == null || nome == "")
-			document.getElementById('erroEmail').value = "Campo obrigatorio";
+			document.getElementById('erroEmail').innerHTML = "Campo obrigatorio";
 		if(senha == null || nome == "")
-			document.getElementById('erroSenha').value = "Campo obrigatorio";
+			document.getElementById('erroSenha').innerHTML = "Campo obrigatorio";
 		if(senha2 == null || nome == "")
-			document.getElementById('erroConfirmaSenha').value = "Campo obrigatorio";
+			document.getElementById('erroConfirmaSenha').innerHTML = "Campo obrigatorio";
 
 		if(senha2 != senha)
 		{
-			document.getElementById('erroSenhas').value = "Senhas diferentes";
-			document.getElementById('senha').value = '';
-			document.getElementById('Confirmasenha').value = '';			
+			document.getElementById('erroSenhas').innerHTML = "Senhas diferentes";
+			document.getElementById('senha').innerHTML = '';
+			document.getElementById('Confirmasenha').innerHTML = '';			
 		}
 		else
 		{

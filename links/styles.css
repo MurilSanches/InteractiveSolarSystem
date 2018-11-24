@@ -734,3 +734,8 @@ color: white;
   background: black;
   color: white;
 }
+
+#erroEmail, #erroNome, #erroSobrenome, #erroSenhas, #erroConfirmaSenha, #erroSenha
+{
+  color: red;
+}

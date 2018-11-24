@@ -58,4 +58,4 @@ rota.post('/Usuario', (requisicao, resposta) =>{
   const email = requisicao.body.Email.substring(0,60);
   const senha = requisicao.body.Senha;  
   execSQL(`INSERT INTO Responsavel(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
-  resposta.end(resposta.json({ mensagem: 'Incluído!'}))});
+  resposta.end(resposta.json({ mensagem: 'Incluído!'}));})
