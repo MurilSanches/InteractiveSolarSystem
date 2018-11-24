@@ -52,10 +52,13 @@ execSQL('SELECT * from Planeta' + filtro, resposta);
 })
 
 rota.post('/Usuario', (requisicao, resposta) =>{
-  //const cod = ultimoResp++;
-  const nome = (requisicao.body.Nome.substring(0,15));
-  const sobrenome = (requisicao.body.Sobrenome).substring(0,50);
+  const nome = requisicao.body.Nome.substring(0,15);
+  const sobrenome = requisicao.body.Sobrenome.substring(0,50);
   const email = requisicao.body.Email.substring(0,60);
   const senha = requisicao.body.Senha;  
-  execSQL(`INSERT INTO Responsavel(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
+  execSQL(`INSERT INTO Usuario(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
   resposta.end(resposta.json({ mensagem: 'Incluído!'}));})
+
+  rota.post('/Usuario/login', (requisicao, resposta) =>{
+    execSQL('SELECT CodUser, Nome FROM Usuario WHERE email = \'' + requisicao.body.Email + "\' AND senha = \'" + requisicao.body.Senha + "\'" , resposta);
+  })

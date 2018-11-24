@@ -378,7 +378,7 @@
 			function(data, status){
 				if (status=='success')
 				{
-					alert("Cadastrado com sucesso!");
+				// 	alert("Cadastrado com sucesso!");
 					alert(data.mensagem);
 					document.getElementById('InputNome').value ="";
 					document.getElementById('InputSobrenome').value ="";
@@ -389,6 +389,47 @@
 				else
 					alert('Ocorreu um erro!');
 			});
-    }
-}
+    	}
+	}
+
+	logar = function()
+	{
+		var email = document.getElementById('email').value;
+		var senha = document.getElementById('senha').value;
+
+		if(email == null || email == "")
+			document.getElementById('erroEmail').value = "Campo obrigatorio";
+		if(senha == null || senha == "")
+			document.getElementById('erroSenha').value = "Campo obrigatorio";
+
+			let logou = false;
+
+			let dados =
+			{
+				Email: email,
+				Senha: senha
+			};
+		
+			$.post("http://localhost:3000/Usuario/login", dados,
+			function(data, status){
+				if (status=='success')
+				{
+				   if (data[0].codUSer != undefined)
+				    {
+					   	sessionStorage.setItem("CodUser", data.CodUser);					   
+					   	logou = true;
+						document.getElementById('email').value = '';
+						document.getElementById('senha').value = '';	
+						alert('Logou');
+						document.getElementsByClassName('login').value = 'Olá, '+ data.Nome;
+						document.getElementsByClassName('cadastro').value = 'Sair';
+						document.getElementsByClassName('cadastro');														  								
+					}
+				}
+				else
+				{
+					alert('Não Logou');
+				}
+			});			 
+	}
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="links/script.js"></script> 
      </head>
-  <body id="SistemaSolar" onload="carregar()">
+  <body id="SistemaSolar">
       <div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
             <center>
@@ -28,7 +28,27 @@
                       <li><a href="PaginaNetuno.html" unselectable="on">Netuno</a></li>
                     </ul>
                   </nav>
-            </center>
+           
+            <br><br><br><br>                                 
+          <div id="Login">
+              <h1>Login</h1>
+              <div>
+                <form id="formLogin">
+                  <ul>                    
+                    <li><label>Email:</label>
+                    <input type="email" id="email">
+                    <label id="erroEmail">*</label></li>
+                    <br>
+                    <li><label>Senha:</label>
+                    <input type="password" id="senha">
+                    <label id="erroSenha">*</label></li>   
+                    <br>                 
+                    <li><input type="submit" onclick="logar()" value="Login" class="Button"></li>                  
+                  </ul>
+                </form>
+              </div>
+          </div>
+        </center>
             <div id="lateral">
                 <div id="menu2">
                         

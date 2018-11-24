@@ -17,7 +17,7 @@
 			document.getElementById('erroSenha').innerHTML = "Campo obrigatorio";
 		if(senha2 == null || nome == "")
 			document.getElementById('erroConfirmaSenha').innerHTML = "Campo obrigatorio";
-
+        
 		if(senha2 != senha)
 		{
 			document.getElementById('erroSenhas').innerHTML = "Senhas diferentes";
@@ -33,12 +33,13 @@
 				Email: email,
 				Senha: senha,				
 			};
+
+			var form = document.getElementById('formCadastro');
 	
 			$.post("http://localhost:3000/Usuario", dados,
 			function(data, status){
 				if (status=='success')
-				{
-					alert("Cadastrado com sucesso!");
+				{					
 					alert(data.mensagem);
 					document.getElementById('InputNome').value ="";
 					document.getElementById('InputSobrenome').value ="";
