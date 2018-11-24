@@ -5,9 +5,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="links/styles.css">
     <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="links/script.js"></script>
 </head>
-<body id="Terra">
+<body id="Terra" onload="carregar2()">
 	<div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
    <center>
@@ -36,10 +37,7 @@
     </div>
       <div id="divInformacao">
           <h1 class="tituloH1">Informações sobre o Terra:</h1>
-          <div id="div-content">
-            <ul>
-              <li><strong>Massa:</strong></li>
-            </ul>
+          <div id="div-content7">
             </div>
       </div>
 </section>
@@ -51,8 +49,9 @@
           
   <h3 class="link-titulo">Sobre você</h3>
     <ul class="box">          
-        <li><a href="PaginaLogin.html">Fazer login ou</a></li>
-        <li><a href="PaginaCadastro.html">Cadastrar</a></li>       
+      <li><a href="PaginaLogin.html" id="liLogin">Fazer login ou</a></li>
+      <li><a href="PaginaCadastro.html" id="liCadastro">Cadastrar</a></li>
+      <li><a href="PaginaPrincipal.html">Pagina Principal</a></li>    
     </ul>
   <h3 class="link-titulo">Sobre</h3>
     <ul class="box">
@@ -64,33 +63,7 @@
   </div> <!-- /#menu -->
   </div id="link"> <!-- vazio --> <div>
   </div> <!-- /#lateral -->
-
-<script type="text/javascript">
- 
-
-  var xmlhttp = new XMLHttpRequest();
-  var url = "http://localhost:3000/planeta/365";
-  xmlhttp.onreadystatechange=function() {
-  if (this.readyState == 4 && this.status == 200) {
-  ExibeDadosTerra(this.responseText);
-  }
-  } 
-  xmlhttp.open("GET", url, true); 
-  xmlhttp.send();
-
-
-  function ExibeDadosTerra(response) {
-  console.log(response);
-  var arr = JSON.parse(response); //converter JSON em array
-  console.log(arr);
-  var out = "<table>";
-  for(var i = 0; i < arr.length; i++) {
-  out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período De Rotação: " + arr[i].PeriodoDeRotacao + "</li><li>Periodo Orbital: " + arr[i].PeriodoOrbital + "</li><li>Temperatura: " + arr[i].Temperatura + "</li><li>Velocidade Orbital: " + arr[i].VelocidadeOrbital + "</li><li>Satélites Naturais: " + arr[i].QntsSatelitesNaturais + "</li></ul>"
-   }
-  out += "</table>";
-  document.getElementById("div-content").innerHTML = out;
-  } 
-  </script>
+  <script type="text/javascript" src="links/ExibirDados.js"></script>
 
 </body>
 </html>

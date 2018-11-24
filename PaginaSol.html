@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="links/styles.css">
     <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="links/script.js"></script>
   </head>
-  <body id="SistemaSolar">
+  <body id="SistemaSolar" onload="carregar2()">
       <div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
     <center>
@@ -36,10 +37,7 @@
   </div>
     <div id="divInformacao">
         <h1 class="tituloH1">Informações sobre o Sol:</h1>
-        <div id="div-content">
-          <ul>
-            <li><strong></strong></li>
-          </ul>
+        <div id="div-content6">
           </div>
     </div>
 </section>
@@ -51,8 +49,9 @@
           
   <h3 class="link-titulo">Sobre você</h3>
     <ul class="box">          
-        <li><a href="PaginaLogin.html">Fazer login ou</a></li>
-          <li><a href="PaginaCadastro.html">Cadastrar</a></li>   
+      <li><a href="PaginaLogin.html" id="liLogin">Fazer login ou</a></li>
+      <li><a href="PaginaCadastro.html" id="liCadastro">Cadastrar</a></li>
+      <li><a href="PaginaPrincipal.html">Pagina Principal</a></li>      
     </ul>
   <h3 class="link-titulo">Sobre</h3>
     <ul class="box">
@@ -64,44 +63,6 @@
   </div> <!-- /#menu -->
   </div id="link"> <!-- vazio --> <div>
   </div> <!-- /#lateral -->
-<script type="text/javascript">
- 
-
-  var xmlhttp = new XMLHttpRequest();
-  var url = "http://localhost:3000/estrela";
-  xmlhttp.onreadystatechange=function() {
-  if (this.readyState == 4 && this.status == 200) {
-  ExibeDadosSol(this.responseText);
-  //ExibeDadosSol2(this.responseText);
-  }
-  } 
-  xmlhttp.open("GET", url, true); 
-  xmlhttp.send();
-
-
-  function ExibeDadosSol(response) {
-  console.log(response);
-  var arr = JSON.parse(response); //converter JSON em array
-  console.log(arr);
-  var out = "<table>";
-  for(var i = 0; i < arr.length; i++) {
-  out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período Orbital Galáctico: " + arr[i].PeriodoOrbitalGalactico + "</li><li>Planetas Orbitantes: " + arr[i].QntsPlanetasOrbitam + "</li><li>Temperatura da Superficie: " + arr[i].TemperaturaSuperficie + "</li><li>Temperatura do Núcleo: " + arr[i].TemperaturaNucleo + "</li><li>Velocidade De Rotação: " + arr[i].VelocidadeDeRotacao + "</li></ul>"
-    }
-  out += "</table>";
-  document.getElementById("div-content").innerHTML = out;
-  } 
-
-  // function ExibeDadosSol2(response) {
-  // console.log(response);
-  // var arr = JSON.parse(response); //converter JSON em array
-  // console.log(arr);
-  // var out = "<table>";
-  // for(var i = 0; i < arr.length; i++) {
-  // out += "<ul class=\"informacaoSol\"><li>Volume: " + arr[i].Volume + "</li><li>Área da Superficie: " + arr[i].AreaDaSuperficie + "</li><li>Massa: " + arr[i].Massa + "</li><li>Densidade: " + arr[i].Densidade + "</li><li>Gravidade: " + arr[i].Gravidade + "</li><li>Período Orbital Galáctico: " + arr[i].PeriodoOrbitalGalactico + "</li><li>Planetas Orbitantes: " + arr[i].QntsPlanetasOrbitam + "</li><li>Temperatura da Superficie: " + arr[i].TemperaturaSuperficie + "</li><li>Temperatura do Núcleo: " + arr[i].TemperaturaNucleo + "</li><li>Velocidade De Rotação: " + arr[i].VelocidadeDeRotacao + "</li><li>Nome do Sistema: " + arr[i].NomeSistema + "</li></ul>"
-  //   }
-  // out += "</table>";
-  // document.getElementById("div-content1").innerHTML = out;
-  // } 
-  </script>
+  <script type="text/javascript" src="links/ExibirDados.js"></script>
   </body>  
 </html> 

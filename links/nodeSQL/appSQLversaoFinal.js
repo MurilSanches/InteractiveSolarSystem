@@ -53,12 +53,14 @@ execSQL('SELECT * from Planeta' + filtro, resposta);
 
 rota.post('/Usuario', (requisicao, resposta) =>{
   const nome = requisicao.body.Nome.substring(0,15);
-  const sobrenome = requisicao.body.Sobrenome.substring(0,50);
-  const email = requisicao.body.Email.substring(0,60);
+  const sobrenome = requisicao.body.Sobrenome.substring(0,30);
+  const email = requisicao.body.Email.substring(0,30);
   const senha = requisicao.body.Senha;  
   execSQL(`INSERT INTO Usuario(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
   resposta.end(resposta.json({ mensagem: 'Incluído!'}));})
 
   rota.post('/Usuario/login', (requisicao, resposta) =>{
-    execSQL('SELECT CodUser, Nome FROM Usuario WHERE email = \'' + requisicao.body.Email + "\' AND senha = \'" + requisicao.body.Senha + "\'" , resposta);
+    const email = requisicao.body.Email.substring(0,30);
+    const senha = requisicao.body.Senha;  
+    execSQL('SELECT CodUser, Nome FROM Usuario WHERE Usuario.Email = \'' + email + "\' AND Usuario.Senha = \'" + senha + "\'" , resposta);    
   })

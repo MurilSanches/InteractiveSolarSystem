@@ -1,4 +1,6 @@
 	var ctx;
+	var nomeUsuario;
+	var logou;
 	
 	orbitaPadrao = function() 
     {  
@@ -48,16 +50,6 @@
 			ctx.closePath();
 	    }
 	};
-
-	// orbitaSaturno = function()
-	// {
-	// 	ctx.beginPath();
-	// 	ctx.fillStyle =  'rgb(88, 35, 12)';
-	// 	ctx.arc(0,403,40,0,2*Math.PI);
-	// 	ctx.fill();
-	// 	ctx.clearRect(0,0);
-	// 	ctx.closePath();
-	// }
 	
 	orbita = function() 
     {  
@@ -104,173 +96,156 @@
 	    
     };
 
-   	// myMove = function() 
-	// {
-	//  	var elem = document.getElementById("terra");   
-	// 	var coordenadas = elem.getBoundingClientRect();
-	// 	var xInicial = coordenadas.left;
-	// 	var x = coordenadas.left;
-	// 	var xInicial = coordenadas.left;
-	// 	var xFinal = 1160;
-	// 	var vx = 1;
-	// 	var y = coordenadas.top;
-	//   	var id = setInterval(frame, 10);
-	//   	function frame() 
-	//   	{  
-	//     	if (x == xFinal) 
-	//       		vx = -1;
-	// 		if(x == xInicial) 	
-	// 			vx = 1;
-
-	// 		x+=vx; 
-	// 		elem.style.left = x + 'px'; 
-  	// 	}		
-	// }
-
 	limparTela = function()
 	{
 		ctx.clearRect(0, 0, $("#orbita").width(), $("#orbita").height());
 	}
 
 	carregar = function(){	    
-		//myMove();
-		orbitaPadrao();
-		//orbitaSaturno();
+		orbitaPadrao();		
+		setInterval(testar, 10);
+	}
+
+	carregar2 = function()
+	{
 		setInterval(testar, 10);
 	}
 
 	mudarOrbita = function()
 	{
-		var chk = document.getElementById("switch");
+		if (document.getElementById('switch'))
 		{
-			var planeta = document.getElementById("sol");
-			planeta.style.transition = "all 2s";
+			var chk = document.getElementById("switch");
+			{
+				var planeta = document.getElementById("sol");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				limparTela();
-				orbita();
-			}
-			else
-			{
-				limparTela();
-				orbitaPadrao();
-			}
+				if(chk.checked != true)
+				{
+					limparTela();
+					orbita();
+				}
+				else
+				{
+					limparTela();
+					orbitaPadrao();
+				}
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 0 +'%';
-			}
-			else
-			{
-				//planeta.style.left = 870 + 'px';
-				planeta.style.left = 46.5 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 0 +'%';
+				}
+				else
+				{
+					//planeta.style.left = 870 + 'px';
+					planeta.style.left = 46.5 + '%';
+				}
 
-			planeta = document.getElementById("mercurio");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("mercurio");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 12.5 +'%';
-			}
-			else
-			{
-				planeta.style.left = 43.2 + '%';
-				//planeta.style.left = 838 + 'px';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 12.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 43.2 + '%';
+					//planeta.style.left = 838 + 'px';
+				}
 
-			planeta = document.getElementById("venus");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("venus");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 16.3 +'%';
-			}
-			else
-			{
-				planeta.style.left = 39.7 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 16.3 +'%';
+				}
+				else
+				{
+					planeta.style.left = 39.7 + '%';
+				}
 
-			planeta = document.getElementById("terra");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("terra");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 21.5 +'%';
-			}
-			else
-			{
-				planeta.style.left = 36.3 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 21.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 36.3 + '%';
+				}
 
-			planeta = document.getElementById("marte");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("marte");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 27 +'%';
-			}
-			else
-			{
-				planeta.style.left = 32.5 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 27 +'%';
+				}
+				else
+				{
+					planeta.style.left = 32.5 + '%';
+				}
 
-			planeta = document.getElementById("jupiter");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("jupiter");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 34.5 +'%';
-			}
-			else
-			{
-				planeta.style.left = 23 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 34.5 +'%';
+				}
+				else
+				{
+					planeta.style.left = 23 + '%';
+				}
 
-			planeta = document.getElementById("saturno");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("saturno");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 46 +'%';
-			}
-			else
-			{
-				planeta.style.left = 16.5 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 46 +'%';
+				}
+				else
+				{
+					planeta.style.left = 16.5 + '%';
+				}
 
-			planeta = document.getElementById("urano");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("urano");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 56 +'%';
-			}
-			else
-			{
-				planeta.style.left = 10 + '%';
-			}
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 56 +'%';
+				}
+				else
+				{
+					planeta.style.left = 10 + '%';
+				}
 
-			planeta = document.getElementById("netuno");
-			planeta.style.transition = "all 2s";
+				planeta = document.getElementById("netuno");
+				planeta.style.transition = "all 2s";
 
-			if(chk.checked != true)
-			{
-				
-				planeta.style.left = 67 +'%';
-			}
-			else
-			{
-				planeta.style.left = 4 + '%';
+				if(chk.checked != true)
+				{
+					
+					planeta.style.left = 67 +'%';
+				}
+				else
+				{
+					planeta.style.left = 4 + '%';
+				}
 			}
 		}
 	}
@@ -308,128 +283,51 @@
 			$("button.css3button").css("left","85%");
 		} 
 
-
-		var screy = $("body").height();
-
-
-
-		var body = document.getElementsByTagName('body')[0],
-	    screX = body.clientWidth,
-	    screY = body.clientHeight;
-
-		var c=document.getElementById("orbita");
-
-		c.width = screX;
-		c.height = screY - (screY * 16 * 0.01); 
-
-		var chk = document.getElementById("switch");
-	
-		if(chk.checked != true)
+		if(document.getElementById("orbita") && document.getElementById("switch"))
 		{
-			limparTela();
-			orbita();
-		}
-		else
-		{
-			limparTela();
-			orbitaPadrao();
-		}
+			var screy = $("body").height();
 
+			var body = document.getElementsByTagName('body')[0],
+			screX = body.clientWidth,
+			screY = body.clientHeight;
 
-	}
+			var c=document.getElementById("orbita");
 
-	
-	checar = function()
-	{
-		var nome 	  = document.getElementById('InputNome').value;
-		var sobrenome = document.getElementById('InputSobrenome').value;
-		var email = document.getElementById('email').value;
-		var senha = document.getElementById('senha').value;
-		var senha2 = document.getElementById('Confirmasenha').value;
+			c.width = screX;
+			c.height = screY - (screY * 16 * 0.01); 
 
-		if(nome == null || nome == "")
-            document.getElementById('erroNome').value = "Campo obrigatorio";            
-		if(sobrenome == null || sobrenome == "")
-			document.getElementById('erroSobrenome').value = "Campo obrigatorio";
-		if(email == null || email == "")
-			document.getElementById('erroEmail').value = "Campo obrigatorio";
-		if(senha == null || senha == "")
-			document.getElementById('erroSenha').value = "Campo obrigatorio";
-		if(senha2 == null || senha2 == "")
-			document.getElementById('erroConfirmaSenha').value = "Campo obrigatorio";
-
-		if(senha2 != senha)
-		{
-			document.getElementById('erroSenhas').value = "Senhas diferentes";
-			document.getElementById('senha').value = '';
-			document.getElementById('Confirmasenha').value = '';			
-		}
-		else
-		{
-			let dados =
-			{
-				Nome: nome,
-				Sobrenome: sobrenome,
-				Email: email,
-				Senha: senha,				
-			};
-	
-			$.post("http://localhost:3000/Usuario", dados,
-			function(data, status){
-				if (status=='success')
-				{
-				// 	alert("Cadastrado com sucesso!");
-					alert(data.mensagem);
-					document.getElementById('InputNome').value ="";
-					document.getElementById('InputSobrenome').value ="";
-					document.getElementById('email').value ="";
-					document.getElementById('senha').value ="";
-					document.getElementById('Confirmasenha').value ="";
-				}
-				else
-					alert('Ocorreu um erro!');
-			});
-    	}
-	}
-
-	logar = function()
-	{
-		var email = document.getElementById('email').value;
-		var senha = document.getElementById('senha').value;
-
-		if(email == null || email == "")
-			document.getElementById('erroEmail').value = "Campo obrigatorio";
-		if(senha == null || senha == "")
-			document.getElementById('erroSenha').value = "Campo obrigatorio";
-
-			let logou = false;
-
-			let dados =
-			{
-				Email: email,
-				Senha: senha
-			};
+			var chk = document.getElementById("switch");
 		
-			$.post("http://localhost:3000/Usuario/login", dados,
-			function(data, status){
-				if (status=='success')
-				{
-				   if (data[0].codUSer != undefined)
-				    {
-					   	sessionStorage.setItem("CodUser", data.CodUser);					   
-					   	logou = true;
-						document.getElementById('email').value = '';
-						document.getElementById('senha').value = '';	
-						alert('Logou');
-						document.getElementsByClassName('login').value = 'Olá, '+ data.Nome;
-						document.getElementsByClassName('cadastro').value = 'Sair';
-						document.getElementsByClassName('cadastro');														  								
-					}
-				}
-				else
-				{
-					alert('Não Logou');
-				}
-			});			 
+			if(chk.checked != true)
+			{
+				limparTela();
+				orbita();
+			}
+			else
+			{
+				limparTela();
+				orbitaPadrao();
+			}
+		}
+		var nome = sessionStorage.getItem("Nome");	
+		if(nome != "null")
+		{			
+			document.getElementById('liLogin').innerHTML = 'Olá, '+ nome;
+			document.getElementById('liCadastro').innerHTML = 'Sair';
+			document.getElementById("liCadastro").addEventListener("click", sair);	
+			document.getElementById("liCadastro").removeAttribute('href');
+			document.getElementById('liLogin').removeAttribute('href');	
+		}
 	}
 
+	
+	sair = function()
+	{
+		sessionStorage.setItem("Nome", null);
+		document.getElementById('liLogin').innerHTML = 'Fazer login ou';
+		document.getElementById('liCadastro').innerHTML = 'Cadastrar';	
+		document.getElementById('liCadastro').removeEventListener("click", sair);
+		document.getElementById("liCadastro").setAttribute('href',"PaginaCadastro.html");
+		document.getElementById('liLogin').setAttribute('href',"PaginaLogin.html");	
+		alert('Deslogado!');
+	}

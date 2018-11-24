@@ -3,14 +3,14 @@
   <head>
     <title>Sistema Solar</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="links/styles.css">
-    <link type="text/javascript" href="links/script.js">
+    <link rel="stylesheet" type="text/css" href="links/styles.css">    
     <link rel="icon" href="links/img/icone_SistemaSolar.ico" type="image/x-icon" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="links/script.js"></script> 
+    <script src="links/Login.js"></script>
      </head>
-  <body id="SistemaSolar">
+  <body id="SistemaSolar" onload="carregar2()">
       <div class="Glow" unselectable="on">
         <div class="Stars" unselectable="on">
             <center>
@@ -43,7 +43,7 @@
                     <input type="password" id="senha">
                     <label id="erroSenha">*</label></li>   
                     <br>                 
-                    <li><input type="submit" onclick="logar()" value="Login" class="Button"></li>                  
+                    <li><input type="button" onclick="logar()" value="Login" class="Button"></li>                  
                   </ul>
                 </form>
               </div>
@@ -54,8 +54,9 @@
                         
                 <h3 class="link-titulo">Sobre você</h3>
                   <ul class="box">          
-                    <li><a href="PaginaLogin.html">Fazer login ou</a></li>
-                    <li><a href="PaginaCadastro.html">Cadastrar</a></li>    
+                    <li><a href="PaginaLogin.html" id="liLogin">Fazer login ou</a></li>
+                    <li><a href="PaginaCadastro.html" id="liCadastro">Cadastrar</a></li>  
+                    <li><a href="PaginaPrincipal.html">Pagina Principal</a></li>  
                   </ul>
                 <h3 class="link-titulo">Sobre</h3>
                   <ul class="box">

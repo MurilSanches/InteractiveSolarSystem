@@ -27,7 +27,7 @@ body
 
 }
 
-.fonte123 ul li 
+.fonte
 { 
   font-size: 15px;
   font-family: Calibri;
@@ -342,7 +342,7 @@ button.css3button {
   text-align: center
 }
 
-#div-content ul 
+#div-content1 ul, #div-content2 ul, #div-content3 ul, #div-content4 ul, #div-content5 ul, #div-content6 ul, #div-content7 ul , #div-content8 ul, #div-content9 ul 
 {
   text-align:inherit;
   position: relative;
@@ -352,7 +352,7 @@ button.css3button {
   z-index: 2;
 }
 
-#div-content ul li 
+#div-content1 ul li, #div-content2 ul li, #div-content3 ul li, #div-content4 ul li, #div-content5 ul li, #div-content6 ul li, #div-content7 ul li, #div-content8 ul li, #div-content9 ul li 
 { 
   position: relative;
   display: line;
@@ -361,7 +361,8 @@ button.css3button {
 .tituloH1
 {
 	font-size: 30px;
-	color: white;
+  color: white;
+  left: 50%;
 }
 
 .divImagem
@@ -376,9 +377,9 @@ button.css3button {
 .informacaoSol
 {
   position: absolute;
-  left: 350px;
-  top: 0;
-  width: 100%;
+  left:30%;
+  top: 20%;
+  width: 50%;
   height: 100%;
   font-family: Calibri;
   font-size: 30px;
