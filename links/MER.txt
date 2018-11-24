@@ -1,0 +1,32 @@
+Planeta
+* Nome 
+- Tamanho 
+- VelocidadeDeTranslação
+- VelocidadeDeRotação
+- DistanciaDoSol
+- qntsLuas
+- Temperatura
+- Descricao
+
+Estrela
+* Nome
+- Tamanho
+- VelocidadeDeRotação
+- Tempetura
+- Descricao
+
+Sistema 
+* Nome
+- NomePlanetas
+- NomeEstrela 
+- Descricao
+
+SateliteNatural 
+* Nome 
+- Tamanho
+- DistanciaAoPlaneta 
+  
+Galaxia
+* Nome
+- VelocidadeDeRotacao
+- NomeSistema

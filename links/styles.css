@@ -97,117 +97,6 @@ body
     top: 15%;
   }
 
-  *, *:before, *:after 
-  {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-/* regra para o clear float */
-.cf:before,
-.cf:after {content: " ";display: table;}
-.cf:after {clear: both;}
-.cf {*zoom: 1;}
-
-#lateral 
-{
-  padding:0 50px 0 0;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  font-size:1.2em;
-  background:rgb(0,0,0);
-  background-image: -moz-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
-  background-image: -webkit-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
-  background-image: -o-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
-  background-image: -ms-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
-  background-image: linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
-  height:100%;
-  overflow:hidden;
-  width:370px; 
-  position:fixed;
-  top:0;
-  left:-320px;
-}
-
-#lateral:before {
-  z-index:1000;  
-  font-size:4em;
-  color:white;
-  position:fixed;
-  left:4px;
-  top:45px;
-  }
-
-#lateral:hover:before, #lateral:focus:before 
-{
-  left:-500px
-}
-
-#lateral:hover, #lateral:focus,  #lateral:active  
-{
-  overflow-y:hidden;
-  -moz-transform: translate(320px, 0);
-  -webkit-transform: translate(320px, 0);
-  -o-transform: translate(320px, 0);
-  transform: translate(320px, 0);
-  padding-right:0;
-} 
-
-#lateral .box 
-{
-  list-style-type:none;
-  margin-bottom:1em;;
-  padding-bottom:1em;
-}
-
-#lateral h3 
-{
-  display:inline-block;
-  font-weight:bold;
-  font-size:1.6em;
-  font-style:normal;
-  padding-bottom:0.2em;
-  margin: 2em 0 2em 0.81em;
-  color:rgb(255,255,255);
-  border-bottom: 4px solid rgb(155,155,155);
-  }
-
-#menu2
-{
-  font-style:italic;
-  position:relative;
-  font-size:1.0em;
-  margin:1em 0 1em -1em;
-  padding:0; 
-}
-
-#menu2 li {padding:0; margin:0;}
-
-#menu2 li a,  #menu2 li a:link 
-{
-  font-size:1.2em;
-  color:rgb(255,255,255);
-  text-decoration: none;
-  padding: 0.8em 0 0.8em 1em;
-  display: block;
-  -moz-transition: all 1.2s ease;
-  -webkit-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
-  transition: all 1.2s ease;
-}
-
-#menu2 li a:hover 
-{
-  color:rgb(255,255,255);
-  background-color:rgba(255,255,255,0.2);
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 body 
 {
   margin-left:55px; /* espaço à esquerda para a barra vertical vísivel do menu */
@@ -222,7 +111,7 @@ body
     height: 17%;
     position: absolute;
     top: 50%;
-    left: 45.125%;
+    left: 46.5%;
   /*  top: 55%;
     left: 870px;*/
     min-width: 192px;
@@ -303,7 +192,7 @@ button.css3button {
     height: 2%;
     position: absolute;
     top: 58%;
-    left: 42%;
+    left: 43.2%;
     /*top: 60%;
     left:815px;*/
     min-width: 19.2px;
@@ -319,7 +208,7 @@ button.css3button {
     height: 4%;
     position: absolute;
     top: 57%;
-    left: 38.5%;
+    left: 39.7%;
     min-width: 38.4px;
     min-height: 43.2px;
     z-index: 1;
@@ -333,7 +222,7 @@ button.css3button {
     height: 3.8%;
     position: absolute;
     top: 57%;
-    left: 35%;
+    left: 36.3%;
     min-width: 42.24px;
     min-height: 41.04px;
     z-index: 1;
@@ -347,7 +236,7 @@ button.css3button {
     height: 3.5%;
     position: absolute;
     top: 57.3%;
-    left: 31.5%;
+    left: 32.5%;
     min-width: 38.4px;
     min-height: 37.8px;
     z-index: 1;
@@ -366,12 +255,6 @@ button.css3button {
     min-height: 116.64px;
     z-index: 1;
   }
-
-  	h1.titulo
-  	{
-  		color:white;
-  		font-size: 40px;
-  	}
 
   .saturno
   {
@@ -415,19 +298,15 @@ button.css3button {
     z-index: 1;
   }
 
-.sectionPlaneta
-{
-  position: absolute;
-  top: 17%;
-  left: 5%;
-  width: 90%;
-  height: 80%;
-  background:#888888;
-  border-radius: 30px;
-  opacity: 0.9;
-  box-shadow: 5px 10px black;
-}
+  h1.titulo
+  {
+    color:white;
+    font-size: 40px;
+  }
 
+/**
+  botao voltar
+*/
 .Voltar
 {
   font-size:15px;
@@ -440,6 +319,22 @@ button.css3button {
   left: 94.6%;
   top: 1%;
   opacity: 0.9;
+}
+
+/**
+  Pagina dos planetas reais
+*/
+.sectionPlaneta
+{
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  background:#888888;
+  border-radius: 30px;
+  opacity: 0.9;
+  box-shadow: 5px 10px black;
 }
 
 #divInformacao 
@@ -489,6 +384,10 @@ button.css3button {
   font-size: 30px;
 }
 
+
+/**
+  classes das imagens reais dos planetas/estrela
+*/
 .SolReal
 {
   background:url("img/Sol.png") no-repeat;
@@ -497,9 +396,8 @@ button.css3button {
   top: -15%;
   width: 125%;
   min-width: 972px;
-  min-height: 900px;
-  height: 105%;
-  min-width: 
+  min-height: 850px;
+  height: 95%;  
 }
 
 .MercurioReal
@@ -508,9 +406,9 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -25%;
-  width: 140%;
-  min-width: 1088.64px;
-  height: 130%;
+  width: 135%;
+  min-width: 950x;
+  height: 120%;
   min-height: 900px;
 }
 
@@ -520,9 +418,9 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -25%;
-  width: 140%;
-  height: 130%;
-   min-width: 1088.64px;
+  width: 135%;
+  height: 120%;
+  min-width: 1000px;
   min-height: 900px;
 }
 
@@ -532,8 +430,8 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -25%;
-  width: 140%;
-  height: 130%;
+  width: 130%;
+  height: 120%;
    min-width: 1088.64px;
   min-height: 900px;
 }
@@ -544,7 +442,7 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -30%;
-  width: 140%;
+  width: 130%;
   height: 130%;
    min-width: 1088.64px;
   min-height: 900px;
@@ -556,10 +454,10 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -15%;
-  width: 140%;
-  height: 110%;
-   min-width: 1088.64px;
-  min-height: 900px;
+  width: 130%;
+  height: 100%;
+  min-width: 1088.64px;
+  min-height: 890px;
 }
 
 .SaturnoReal
@@ -568,10 +466,10 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -10%;
-  width: 150%;
-  height: 100%;
+  width: 140%;
+  height: 90%;
   min-width: 1166.4px;
-  min-height: 900px;
+  min-height: 850px;
 }
 
 .UranoReal
@@ -580,10 +478,10 @@ button.css3button {
   position: absolute;
   left: -45%;
   top: -25%;
-  width: 140%;
-  height: 130%;
-   min-width: 1088.64px;
-  min-height: 900px;
+  width: 120%;
+  height: 120%;
+  min-width: 1088.64px;
+  min-height: 850px;
 }
 
 .NetunoReal
@@ -593,11 +491,14 @@ button.css3button {
   left: -45%;
   top: -25%;
   width: 140%;
-  height: 130%;
+  height: 120%;
 min-width: 1088.64px;
   min-height: 900px;
 }
 
+/**
+  botao switch de vizualização
+*/
 .switch {
   position: relative;
   display: inline-block;
@@ -648,7 +549,6 @@ input:checked + .slider:before {
   transform: translateX(19px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -657,6 +557,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+
+/**
+  menu da informação dos planetas
+*/
 .dropdown 
 {
   position: relative;
@@ -681,5 +585,119 @@ input:checked + .slider:before {
 #jupiter:hover .dropdown-content6, #saturno:hover .dropdown-content7, #urano:hover .dropdown-content8, #netuno:hover .dropdown-content9
 {
   display: block;
+}
+
+/**
+  aba lateral
+*/
+*, *:before, *:after 
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* regra para o clear float */
+.cf:before,
+.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+#lateral 
+{
+padding:0 50px 0 0;
+-moz-transition: all 0.5s ease;
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+font-size:1.2em;
+background:rgb(0,0,0);
+background-image: -moz-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
+background-image: -webkit-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
+background-image: -o-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
+background-image: -ms-linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
+background-image: linear-gradient(135deg, rgb(0,0,0), rgb(18, 20, 19));
+height:100%;
+overflow:hidden;
+width:370px; 
+position:fixed;
+top:0;
+left:-320px;
+}
+
+#lateral:before {
+z-index:1000;  
+font-size:4em;
+color:white;
+position:fixed;
+left:4px;
+top:45px;
+}
+
+#lateral:hover:before, #lateral:focus:before 
+{
+left:-500px
+}
+
+#lateral:hover, #lateral:focus,  #lateral:active  
+{
+overflow-y:hidden;
+-moz-transform: translate(320px, 0);
+-webkit-transform: translate(320px, 0);
+-o-transform: translate(320px, 0);
+transform: translate(320px, 0);
+padding-right:0;
+} 
+
+#lateral .box 
+{
+list-style-type:none;
+margin-bottom:1em;;
+padding-bottom:1em;
+}
+
+#lateral h3 
+{
+display:inline-block;
+font-weight:bold;
+font-size:1.6em;
+font-style:normal;
+padding-bottom:0.2em;
+margin: 2em 0 2em 0.81em;
+color:rgb(255,255,255);
+border-bottom: 4px solid rgb(155,155,155);
+}
+
+#menu2
+{
+font-style:italic;
+position:relative;
+font-size:1.0em;
+margin:1em 0 1em -1em;
+padding:0; 
+}
+
+#menu2 li {padding:0; margin:0;}
+
+#menu2 li a,  #menu2 li a:link 
+{
+font-size:1.2em;
+color:rgb(255,255,255);
+text-decoration: none;
+padding: 0.8em 0 0.8em 1em;
+display: block;
+-moz-transition: all 1.2s ease;
+-webkit-transition: all 1.2s ease;
+-o-transition: all 1.2s ease;
+transition: all 1.2s ease;
+}
+
+#menu2 li a:hover 
+{
+color:rgb(255,255,255);
+background-color:rgba(255,255,255,0.2);
+-moz-transition: all 0.5s ease;
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
 }
 

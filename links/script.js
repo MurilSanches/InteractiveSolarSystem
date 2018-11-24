@@ -165,7 +165,7 @@
 			else
 			{
 				//planeta.style.left = 870 + 'px';
-				planeta.style.left = 45.125 + '%';
+				planeta.style.left = 46.5 + '%';
 			}
 
 			planeta = document.getElementById("mercurio");
@@ -174,11 +174,11 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 12 +'%';
+				planeta.style.left = 12.5 +'%';
 			}
 			else
 			{
-				planeta.style.left = 42 + '%';
+				planeta.style.left = 43.2 + '%';
 				//planeta.style.left = 838 + 'px';
 			}
 
@@ -188,11 +188,11 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 15.625 +'%';
+				planeta.style.left = 16.3 +'%';
 			}
 			else
 			{
-				planeta.style.left = 38.5 + '%';
+				planeta.style.left = 39.7 + '%';
 			}
 
 			planeta = document.getElementById("terra");
@@ -201,11 +201,11 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 20.8 +'%';
+				planeta.style.left = 21.5 +'%';
 			}
 			else
 			{
-				planeta.style.left = 35 + '%';
+				planeta.style.left = 36.3 + '%';
 			}
 
 			planeta = document.getElementById("marte");
@@ -214,11 +214,11 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 26 +'%';
+				planeta.style.left = 27 +'%';
 			}
 			else
 			{
-				planeta.style.left = 31.5 + '%';
+				planeta.style.left = 32.5 + '%';
 			}
 
 			planeta = document.getElementById("jupiter");
@@ -227,7 +227,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 33.85 +'%';
+				planeta.style.left = 34.5 +'%';
 			}
 			else
 			{
@@ -240,7 +240,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 44.27 +'%';
+				planeta.style.left = 46 +'%';
 			}
 			else
 			{
@@ -253,7 +253,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 54.68 +'%';
+				planeta.style.left = 56 +'%';
 			}
 			else
 			{
@@ -266,7 +266,7 @@
 			if(chk.checked != true)
 			{
 				
-				planeta.style.left = 65.1 +'%';
+				planeta.style.left = 67 +'%';
 			}
 			else
 			{
