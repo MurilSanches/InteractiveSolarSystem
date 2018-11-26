@@ -43,7 +43,8 @@
 							document.getElementById('liCadastro').innerHTML = 'Sair';
 							document.getElementById("liCadastro").addEventListener("click", sair);	
 							document.getElementById("liCadastro").removeAttribute('href');
-							document.getElementById('liLogin').removeAttribute('href');																									  								
+							document.getElementById('liLogin').removeAttribute('href');	
+							window.location.replace("PaginaPrincipal.html");																									  								
 						}
 						else{
 							alert('Login não existe');
@@ -66,7 +67,8 @@
 							document.getElementById('liCadastro').innerHTML = 'Sair';
 							document.getElementById("liCadastro").addEventListener("click", sair);	
 							document.getElementById("liCadastro").removeAttribute('href');
-							document.getElementById('liLogin').removeAttribute('href');																									  								
+							document.getElementById('liLogin').removeAttribute('href');	
+							window.location.replace("PaginaPrincipal.html");																									  								
 						}
 						else{
 							alert('Login não existe');

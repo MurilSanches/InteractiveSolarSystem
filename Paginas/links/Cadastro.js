@@ -52,7 +52,8 @@
 			function(data, status){
 				if (status=='success')
 				{				 	
-					alert(data.mensagem);
+					alert(data.mensagem);					
+					sessionStorage.setItem("Nome", dados.Nome);	
 					document.getElementById('InputNome').value ="";
 					document.getElementById('InputSobrenome').value ="";
 					document.getElementById('email').value ="";
@@ -64,6 +65,12 @@
 					document.getElementById('erroEmail').innerHTML = "*";
 					document.getElementById('erroNome').innerHTML = "*";   
 					document.getElementById('erroSobrenome').innerHTML = "*";
+					document.getElementById('liLogin').innerHTML = 'Olá, '+ dados.Nome;
+					document.getElementById('liCadastro').innerHTML = 'Sair';
+					document.getElementById("liCadastro").addEventListener("click", sair);	
+					document.getElementById("liCadastro").removeAttribute('href');
+					document.getElementById('liLogin').removeAttribute('href');	
+					window.location.replace("PaginaPrincipal.html");									
 				}
 				else
 					alert('Ocorreu um erro!');

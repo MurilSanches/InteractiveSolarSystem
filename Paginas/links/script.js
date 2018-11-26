@@ -329,5 +329,6 @@
 		document.getElementById('liCadastro').removeEventListener("click", sair);
 		document.getElementById("liCadastro").setAttribute('href',"PaginaCadastro.html");
 		document.getElementById('liLogin').setAttribute('href',"PaginaLogin.html");	
+		window.location.replace("PaginaPrincipal.html");
 		alert('Deslogado!');
 	}
