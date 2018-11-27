@@ -1,4 +1,4 @@
-
+﻿
 const express = require('express');
 const app = express();         
 const bodyParser = require('body-parser');
@@ -63,4 +63,4 @@ rota.post('/Usuario', (requisicao, resposta) =>{
     const email = requisicao.body.Email.substring(0,30);
     const senha = requisicao.body.Senha;  
     execSQL('SELECT CodUser, Nome FROM Usuario WHERE Usuario.Email = \'' + email + "\' AND Usuario.Senha = \'" + senha + "\'" , resposta);    
-  })
+  })  

@@ -139,7 +139,7 @@
 				else
 				{
 					//planeta.style.left = 870 + 'px';
-					planeta.style.left = 46.5 + '%';
+					planeta.style.left = 55.5 + '%';
 				}
 
 				planeta = document.getElementById("mercurio");
@@ -148,12 +148,12 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 12.5 +'%';
+					planeta.style.left = 14.5 +'%';
 				}
 				else
 				{
-					planeta.style.left = 43.2 + '%';
-					//planeta.style.left = 838 + 'px';
+					// planeta.style.left = 43.2 + '%';
+					planeta.style.left = 52 + '%';
 				}
 
 				planeta = document.getElementById("venus");
@@ -162,11 +162,12 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 16.3 +'%';
+					planeta.style.left = 19.5 +'%';
+					//planeta.style.left = 16.3 +'%';
 				}
 				else
 				{
-					planeta.style.left = 39.7 + '%';
+					planeta.style.left = 48 + '%';
 				}
 
 				planeta = document.getElementById("terra");
@@ -175,11 +176,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 21.5 +'%';
+					planeta.style.left = 25.5 +'%';
+					//planeta.style.left = 21.5 +'%';
 				}
 				else
 				{
-					planeta.style.left = 36.3 + '%';
+					planeta.style.left = 43.5 + '%';
+					//planeta.style.left = 36.3 + '%';
 				}
 
 				planeta = document.getElementById("marte");
@@ -188,11 +191,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 27 +'%';
+					planeta.style.left = 32 +'%';
+					//planeta.style.left = 27 +'%';
 				}
 				else
 				{
-					planeta.style.left = 32.5 + '%';
+					planeta.style.left = 39 + '%';
+					//planeta.style.left = 32.5 + '%';
 				}
 
 				planeta = document.getElementById("jupiter");
@@ -201,11 +206,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 34.5 +'%';
+					planeta.style.left = 42 +'%';
+					//planeta.style.left = 34.5 +'%';
 				}
 				else
 				{
-					planeta.style.left = 23 + '%';
+					planeta.style.left = 28 + '%';
+					//planeta.style.left = 23 + '%';
 				}
 
 				planeta = document.getElementById("saturno");
@@ -214,11 +221,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 46 +'%';
+					planeta.style.left = 55 +'%';
+					//planeta.style.left = 46 +'%';
 				}
 				else
 				{
-					planeta.style.left = 16.5 + '%';
+					planeta.style.left = 21 + '%';
+					//planeta.style.left = 16.5 + '%';
 				}
 
 				planeta = document.getElementById("urano");
@@ -227,11 +236,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 56 +'%';
+					planeta.style.left = 67.5 +'%';
+					//planeta.style.left = 56 +'%';
 				}
 				else
 				{
-					planeta.style.left = 10 + '%';
+					planeta.style.left = 13 + '%';
+					//planeta.style.left = 10 + '%';
 				}
 
 				planeta = document.getElementById("netuno");
@@ -240,11 +251,13 @@
 				if(chk.checked != true)
 				{
 					
-					planeta.style.left = 67 +'%';
+					//planeta.style.left = 67 +'%';
+					planeta.style.left = 80 +'%';
 				}
 				else
 				{
-					planeta.style.left = 4 + '%';
+					//planeta.style.left = 4 + '%';
+					planeta.style.left = 5 + '%';
 				}
 			}
 		}
