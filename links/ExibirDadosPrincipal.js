@@ -14,7 +14,7 @@
 
   function ExibeDadosSol(response) 
   {
-    var arr = JSON.parse(response); //converter JSON em array
+    var arr = JSON.parse(response);
     var out = "<p>Sol:</p><ul class=\"fonte\"><li>Volume: " + arr[0].Volume + 
     "</li><br><li>Massa: " + arr[0].Massa + 
     "</li><br><li>Gravidade: " + arr[0].Gravidade + 

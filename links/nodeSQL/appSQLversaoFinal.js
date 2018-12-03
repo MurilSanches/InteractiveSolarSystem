@@ -42,6 +42,10 @@ rota.get('/estrela', (requisicao, resposta) =>{
 execSQL('SELECT * FROM Estrela', resposta)
 })
 
+rota.get('/Usuario/:Email?', (requisicao, resposta) =>{
+execSQL(`SELECT * FROM Usuario where Email = '${requisicao.params.Email}'`, resposta)
+})
+
 
 //o simbolo ? indica que id na rota abaixo é opcional
 rota.get('/planeta/:id?', (requisicao, resposta) => {
@@ -58,12 +62,7 @@ rota.post('/Usuario', (requisicao, resposta) =>{
   const senha = requisicao.body.Senha; 
   var qnt; 
   execSQL(`INSERT INTO Usuario(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
-  execSQL(`SELECT '${qnt}'= COUNT(Email) FROM Usuario where Email ='${email}'`, resposta);
-  if(qnt == 1)
-  	resposta.end(resposta.json({ mensagem: 'Incluido'}));
-  else if(qnt > 1)
-  	resposta.end(resposta.json({mensagem: 'Email ja Cadastrado'}));
-})
+resposta.end(resposta.json({mensagem: 'Incluido'}));})
 
   rota.post('/Usuario/login', (requisicao, resposta) =>{
     const email = requisicao.body.Email.substring(0,30);

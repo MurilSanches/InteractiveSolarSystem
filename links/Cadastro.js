@@ -1,3 +1,44 @@
+	VerificaUsuario = function(response, dados)
+	{
+		var arr = JSON.parse(response);
+
+		if(arr[0] == null || arr[0] == "")		
+			Cadastrar(dados);			
+		else
+			alert("Email ja cadastrado");
+
+	}	
+
+	Cadastrar = function(dados)
+	{
+		$.post("http://localhost:3000/Usuario", dados,
+			function(data, status){
+			if (status=='success')
+			{	    
+				alert(data.mensagem);			
+				sessionStorage.setItem("Nome", dados.Nome);	
+				document.getElementById('InputNome').value ="";
+				document.getElementById('InputSobrenome').value ="";
+				document.getElementById('email').value ="";
+				document.getElementById('senha').value ="";
+				document.getElementById('Confirmasenha').value ="";
+				document.getElementById('erroSenhas').innerHTML = "";
+				document.getElementById('erroConfirmaSenha').innerHTML = "*";
+				document.getElementById('erroSenha').innerHTML = "*";
+				document.getElementById('erroEmail').innerHTML = "*";
+				document.getElementById('erroNome').innerHTML = "*";   
+				document.getElementById('erroSobrenome').innerHTML = "*";
+				document.getElementById('liLogin').innerHTML = 'Olá, '+ dados.Nome;
+				document.getElementById('liCadastro').innerHTML = 'Sair';
+				document.getElementById("liCadastro").addEventListener("click", sair);	
+				document.getElementById("liCadastro").removeAttribute('href');
+				document.getElementById('liLogin').removeAttribute('href');		
+				window.location.replace("PaginaPrincipal.html");									
+			}
+			else
+				alert('Ocorreu um erro!');
+			});
+	}
 
 	checar = function()
 	{
@@ -47,33 +88,17 @@
 				Email: email,
 				Senha: senha,				
 			};
-	
-			$.post("http://localhost:3000/Usuario", dados,
-			function(data, status){
-				if (status=='success')
-				{	
-					alert(data.mensagem);			
-					sessionStorage.setItem("Nome", dados.Nome);	
-					document.getElementById('InputNome').value ="";
-					document.getElementById('InputSobrenome').value ="";
-					document.getElementById('email').value ="";
-					document.getElementById('senha').value ="";
-					document.getElementById('Confirmasenha').value ="";
-					document.getElementById('erroSenhas').innerHTML = "";
-					document.getElementById('erroConfirmaSenha').innerHTML = "*";
-					document.getElementById('erroSenha').innerHTML = "*";
-					document.getElementById('erroEmail').innerHTML = "*";
-					document.getElementById('erroNome').innerHTML = "*";   
-					document.getElementById('erroSobrenome').innerHTML = "*";
-					document.getElementById('liLogin').innerHTML = 'Olá, '+ dados.Nome;
-					document.getElementById('liCadastro').innerHTML = 'Sair';
-					document.getElementById("liCadastro").addEventListener("click", sair);	
-					document.getElementById("liCadastro").removeAttribute('href');
-					document.getElementById('liLogin').removeAttribute('href');		
-					window.location.replace("PaginaPrincipal.html");									
-				}
-				else
-					alert('Ocorreu um erro!');
-			});
+			
+		    var xmlhttp = new XMLHttpRequest();
+  			var url = "http://localhost:3000/Usuario/"+dados.Email;
+  			xmlhttp.onreadystatechange=function() 
+  			{
+			  	if (this.readyState == 4 && this.status == 200)
+			  	{
+			   		VerificaUsuario(this.responseText , dados);
+			  	}
+		  	} 
+		  	xmlhttp.open("GET", url, true); 
+		  	xmlhttp.send();			
     	}
 	}
