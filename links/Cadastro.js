@@ -51,8 +51,8 @@
 			$.post("http://localhost:3000/Usuario", dados,
 			function(data, status){
 				if (status=='success')
-				{				 	
-					alert(data.mensagem);					
+				{	
+					alert(data.mensagem);			
 					sessionStorage.setItem("Nome", dados.Nome);	
 					document.getElementById('InputNome').value ="";
 					document.getElementById('InputSobrenome').value ="";

@@ -31,11 +31,11 @@ app.listen(porta);
 console.log('API Funcionando!');
 
 function execSQL(sql, resposta) {
-global.conexao.request()
-.query(sql)
-.then(resultado => resposta.json(resultado.recordset))
-//.then(resultado => console.log(resultado.recordset))
-.catch(erro => resposta.json(erro));
+	global.conexao.request()
+				  .query(sql)
+				  .then(resultado => resposta.json(resultado.recordset))
+          //.then(resultado => console.log(resultado.recordset))
+				  .catch(erro => resposta.json(erro));
 }
 
 rota.get('/estrela', (requisicao, resposta) =>{
@@ -55,9 +55,15 @@ rota.post('/Usuario', (requisicao, resposta) =>{
   const nome = requisicao.body.Nome.substring(0,15);
   const sobrenome = requisicao.body.Sobrenome.substring(0,30);
   const email = requisicao.body.Email.substring(0,30);
-  const senha = requisicao.body.Senha;  
+  const senha = requisicao.body.Senha; 
+  var qnt; 
   execSQL(`INSERT INTO Usuario(Nome, Sobrenome, Email, Senha) VALUES('${nome}','${sobrenome}','${email}','${senha}')`, resposta);
-  resposta.end(resposta.json({ mensagem: 'Incluído!'}));})
+  execSQL(`SELECT '${qnt}'= COUNT(Email) FROM Usuario where Email ='${email}'`, resposta);
+  if(qnt == 1)
+  	resposta.end(resposta.json({ mensagem: 'Incluido'}));
+  else if(qnt > 1)
+  	resposta.end(resposta.json({mensagem: 'Email ja Cadastrado'}));
+})
 
   rota.post('/Usuario/login', (requisicao, resposta) =>{
     const email = requisicao.body.Email.substring(0,30);
