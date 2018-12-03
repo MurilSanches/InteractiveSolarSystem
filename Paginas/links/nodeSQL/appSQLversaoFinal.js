@@ -1,10 +1,10 @@
-
+﻿
 const express = require('express');
 const app = express();         
 const bodyParser = require('body-parser');
 const porta = 3000; //porta padrão
 const sql = require('mssql');
-const conexaoStr = "Server=regulus;Database=XXX;User Id=YYY;Password=ZZZ;";
+const conexaoStr = "Server=regulus;Database=PR118187;User Id=PR118187;Password=PR118187;";
 
 //conexao com BD
 sql.connect(conexaoStr)
@@ -63,4 +63,4 @@ rota.post('/Usuario', (requisicao, resposta) =>{
     const email = requisicao.body.Email.substring(0,30);
     const senha = requisicao.body.Senha;  
     execSQL('SELECT CodUser, Nome FROM Usuario WHERE Usuario.Email = \'' + email + "\' AND Usuario.Senha = \'" + senha + "\'" , resposta);    
-  })
+  })  
