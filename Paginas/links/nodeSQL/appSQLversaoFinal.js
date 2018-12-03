@@ -31,11 +31,11 @@ app.listen(porta);
 console.log('API Funcionando!');
 
 function execSQL(sql, resposta) {
-	global.conexao.request()
-				  .query(sql)
-				  .then(resultado => resposta.json(resultado.recordset))
-          //.then(resultado => console.log(resultado.recordset))
-				  .catch(erro => resposta.json(erro));
+global.conexao.request()
+.query(sql)
+.then(resultado => resposta.json(resultado.recordset))
+//.then(resultado => console.log(resultado.recordset))
+.catch(erro => resposta.json(erro));
 }
 
 rota.get('/estrela', (requisicao, resposta) =>{
