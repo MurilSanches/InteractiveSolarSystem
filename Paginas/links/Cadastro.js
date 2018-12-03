@@ -5,7 +5,7 @@
 		if(arr[0] == null || arr[0] == "")		
 			Cadastrar(dados);			
 		else
-			alert("Email ja cadastrado");
+			alert("E-mail já cadastrado");
 
 	}	
 
